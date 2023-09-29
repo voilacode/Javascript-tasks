@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #carousel-container {
+            @apply flex flex-col items-center mt-8 mb-8;
+        }
+
+        #carousel-heading {
+            @apply text-2xl font-bold mb-4 text-center; /* Centered and bold heading */
+        }
+
+        #image-list {
+            @apply flex transition-transform ease-in-out duration-500;
+        }
+
+        .carousel-image {
+            @apply w-full flex-shrink-0 rounded-lg;
+        }
+
+        .carousel-image:not(:last-child) {
+            @apply mr-2; /* Add margin to all images except the last one */
+        }
+
+        #prevBtn, #nextBtn {
+            @apply cursor-pointer text-white bg-gray-800 border-none px-4 py-2 rounded-full;
+            @apply mx-2;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="carousel-container">
+        <h2 id="carousel-heading" class="text-2xl font-bold mb-4 text-center">Image Carousel</h2>
+        <button id="prevBtn">Prev</button>
+        <div id="image-list" class="flex transition-transform ease-in-out duration-500">
+            <img class="carousel-image" src="./assets/web-development.jpg" alt="Image 1">
+            <img class="carousel-image" src="./assets/Cyber-Img.jpg" alt="Image 2">
+            <img class="carousel-image" src="./assets/Data_Science.jpg" alt="Image 3">
+        </div>
+        <button id="nextBtn">Next</button>
+    </div>
+    <script src="carousel.js"></script>
+</body>
+</html>
