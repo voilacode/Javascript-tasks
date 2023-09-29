@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .accordion{
+        @apply bg-yellow-200 cursor-pointer;
+    }
+}
