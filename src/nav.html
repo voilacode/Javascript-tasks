@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="max-w-screen-xl p-4 mx-auto bg-white border-b sm:px-16">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <div>
+                <img class="cursor-pointer" src="https://fresherbot.com/storage/core/assets/fresherbot_logo_dark.png" alt="..." width="150px">
+            </div>
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-5 w-full">
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">About</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Colleges</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Developers</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Team</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="hidden px-5 py-2 text-white bg-blue-600 rounded-full shadow-xl hover:bg-blue-400 sm:block">Sign in</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden">&#9776;</ion-icon>
+            </div>
+    </header>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9.9%]')
+        }
+
+    </script>
+</body>
+
+</html>
