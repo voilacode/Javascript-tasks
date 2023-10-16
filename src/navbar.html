@@ -46,15 +46,6 @@
   display: block;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
 
     </style>
 </head>
@@ -69,8 +60,8 @@
             </div>
 
             <!--list items-->
-            <div class="absolute top-[-100%] lg:static nav-links duration-500 bg-white w-full lg:w-auto">
-                <ul class="flex flex-col lg:flex-row gap-5 lg:gap-12 w-full">
+            <div class="absolute top-[-100%] lg:static nav-links duration-500 bg-white mx-auto">
+                <ul class="flex flex-col lg:flex-row gap-y-5 lg:gap-12 w-screen lg:w-auto">
                     <li>
                         <a href="#" class="hover:text-blue-600">Home</a>
                     </li>
@@ -83,16 +74,16 @@
                     <li>
                         <a href="#" class="hover:text-blue-600">Developers</a>
                     </li>
-                    <div class="dropdown">
+                    <li class="dropdown">
                         <button class="dropbtn">Courses 
                           <i class="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-content bg-gray-100">
+                        <div class="dropdown-content bg-gray-100 w-fit">
                           <a href="#" class="float-none p-4 text-decoration-none block text-left hover:bg-sky-300 text-black">Course 1</a>
                           <a href="#" class="float-none p-4 text-decoration-none block text-left hover:bg-sky-300 text-black">Course 2</a>
                           <a href="#" class="float-none p-4 text-decoration-none block text-left hover:bg-sky-300 text-black">Course 3</a>
                         </div>
-                      </div> 
+                    </li> 
                 </ul>
             </div>
 
@@ -110,10 +101,6 @@
             icon.name = icon.name === 'menu' ? 'close' : 'menu'
             navLinks.classList.toggle('top-[10.5%]')
         }
-
-        // document.getElementsByClassName('dropdown').onclick = function(){
-        //     document.getElementsByClassName('dropdown-content').remove('hidden');
-        // };
     </script>
 </body>
 
