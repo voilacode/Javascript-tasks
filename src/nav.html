@@ -2,51 +2,62 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/output.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body>
-    <header class="max-w-screen-xl p-4 mx-auto bg-white border-b sm:px-16">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
-            <div>
-                <img class="cursor-pointer" src="https://fresherbot.com/storage/core/assets/fresherbot_logo_dark.png" alt="..." width="150px">
+<body class="">
+    <nav class=" bg-gradient-to-b from-cyan-800 to-cyan-500">
+        <div class="p-4 py-3 sm:px-8 lg:flex lg:items-center lg:justify-between max-w-screen-xl mx-auto">
+            <div class="flex justify-between items-center">
+              <span class="text-2xl cursor-pointer bg-white p-2 pb-3 rounded">
+                <img class="inline"
+                  src="https://fresherbot.com/storage/core/assets/fresherbot_logo_dark.png" width="170px">
+              </span>
+        
+              <span class="text-3xl cursor-pointer mx-2 lg:hidden block">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+              </span>
             </div>
-            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit top-[-100%] md:w-auto w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-5 w-full">
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Home</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#">About</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Colleges</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Developers</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Team</a>
-                    </li>
-                </ul>
+        
+            <ul class="lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+              <li class="mx-4 my-6 lg:my-0">
+                <a href="#" class="text-md text-cyan-700 lg:text-white hover:text-cyan-200 duration-500 tracking-wide ">HOME</a>
+              </li>
+              <li class="mx-4 my-6 lg:my-0">
+                <a href="#" class="text-md text-cyan-700 lg:text-white hover:text-cyan-200 duration-500 tracking-wide ">SERVICES</a>
+              </li>
+              <li class="mx-4 my-6 lg:my-0">
+                <a href="#" class="text-md text-cyan-700 lg:text-white hover:text-cyan-200 duration-500 tracking-wide ">PRODUCTS</a>
+              </li>
+              <li class="mx-4 my-6 lg:my-0">
+                <a href="#" class="text-md text-cyan-700 lg:text-white hover:text-cyan-200 duration-500 tracking-wide ">BLOG'S</a>
+              </li>
+              <li class="mx-4 my-6 lg:my-0">
+                <a href="#" class="text-md text-cyan-700 lg:text-white hover:text-cyan-200 duration-500 tracking-wide ">CONTACT</a>
+              </li>
+        
+              <button class="bg-cyan-400 text-white duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+                Get started
+              </button>
+        <h2 class=""></h2>
+            </ul>
             </div>
-            <div class="flex items-center gap-6">
-                <button class="hidden px-5 py-2 text-white bg-blue-600 rounded-full shadow-xl hover:bg-blue-400 sm:block">Sign in</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden">&#9776;</ion-icon>
+            
             </div>
-    </header>
+    </nav>
+  
 
-    <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9.9%]')
-        }
 
-    </script>
+  <script>
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+  </script>
 </body>
 
 </html>
