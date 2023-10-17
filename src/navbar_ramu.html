@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +8,56 @@
     <!-- Include the following stylesheet link for Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-   
-    <nav class="flex items-center justify-between bg-blue-500 p-6 lg:px-24">
-       
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <img src="https://fresherbot.com/storage/core/assets/fresherbot_logo_dark.png" alt="logo" width="170px" height="auto">
+
+    <nav class="flex items-center justify-between p-6 bg-blue-500 lg:px-24">
+
+        <div class="flex items-center flex-shrink-0 mr-6 text-white">
+            <img src="https://fresherbot.com/storage/core/assets/fresherbot_logo_dark.png" alt="logo" width="170px"
+                height="auto">
         </div>
 
-       
+
         <div class="block lg:hidden">
-            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0zm0 6h20v2H0zm0 6h20v2H0z"/></svg>
+            <button id="nav-toggle"
+                class="flex items-center px-3 py-2 text-white border border-white rounded hover:text-white hover:border-white">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0zm0 6h20v2H0zm0 6h20v2H0z" />
+                </svg>
             </button>
         </div>
 
-       
+
         <div class="hidden lg:flex lg:items-center" id="nav-content">
-            <a href="#" class="text-white hover:text-white px-3 py-2 font-bold hover:opacity-70">Home</a>
-            <a href="#" class="text-white hover:text-white px-3 py-2 font-bold hover:opacity-70">About</a>
-            <a href="#" class="text-white hover:text-white px-3 py-2 font-bold hover:opacity-70">Services</a>
-            <a href="#" class="text-white hover:text-white px-3 py-2 font-bold hover:opacity-70">Contact</a>
+            <a href="#" class="px-3 py-2 font-bold text-white hover:text-white hover:opacity-70">Home</a>
+            <a href="#" class="px-3 py-2 font-bold text-white hover:text-white hover:opacity-70">About</a>
+            <a href="#" class="px-3 py-2 font-bold text-white hover:text-white hover:opacity-70">Services</a>
+            <a href="#" class="px-3 py-2 font-bold text-white hover:text-white hover:opacity-70">Contact</a>
         </div>
     </nav>
 
-    
+
     <div class="hidden w-full lg:hidden" id="mobile-nav-content">
-        <div class="text-sm text-white px-6 py-4 bg-blue-500 p-6">
-            <a href="#" class="block mt-4 text-black hover:bg-white p-4 rounded-full">
+        <div class="p-6 px-6 py-4 text-sm text-white bg-blue-500">
+            <a href="#" class="block p-4 mt-4 text-black rounded-full hover:bg-white">
                 Home
             </a>
-            <a href="#" class="block mt-4 text-black hover:bg-white p-4 rounded-full">
+            <a href="#" class="block p-4 mt-4 text-black rounded-full hover:bg-white">
                 About
             </a>
-            <a href="#" class="block mt-4 text-black hover:bg-white p-4 rounded-full">
+            <a href="#" class="block p-4 mt-4 text-black rounded-full hover:bg-white">
                 Services
             </a>
-            <a href="#" class="block mt-4 text-black hover:bg-white p-4 rounded-full">
+            <a href="#" class="block p-4 mt-4 text-black rounded-full hover:bg-white">
                 Contact
             </a>
         </div>
     </div>
 
-    
+
     <script>
         document.getElementById('nav-toggle').addEventListener('click', function () {
             var mobileNavContent = document.getElementById('mobile-nav-content');
@@ -60,7 +67,9 @@
                 mobileNavContent.classList.add('hidden');
             }
         });
+
     </script>
 
 </body>
+
 </html>
