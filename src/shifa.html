@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-xl">
+        <div class="flex items-center justify-between max-w-screen-xl p-4 mx-auto sm:px-10">
+            <div class="text-2xl font-bold text-white">
+                <img src="../assets/voilacode-dark-logo.png" width="180px" alt="">
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-3xl ">
+                    &#9776; <!-- Hamburger icon -->
+                </button>
+            </div>
+            <div class="hidden space-x-4 lg:flex">
+                <a href="#" class="transition hover:text-blue-300">Home</a>
+                <a href="#" class="transition hover:text-blue-300">About</a>
+                
+                <div class="relative group">
+                    <a href="#" class="transition hover:text-blue-300">Products</a>
+                    <!-- Second Dropdown -->
+                    <div class="absolute left-0 hidden mt-2 space-y-2 text-sm bg-blue-500 border border-white rounded-lg group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-blue-400">Product 1</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-blue-400">Product 2</a>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <a href="#" class="transition hover:text-blue-300">Services</a>
+                    <!-- First Dropdown -->
+                    <div class="absolute left-0 hidden mt-2 space-y-2 text-sm bg-blue-500 border border-white rounded-lg group-hover:block">
+                        <a href="#" class="block px-4 py-2 hover:bg-blue-400">Product 1</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-blue-400">Product 2</a>
+                    </div>
+                </div>
+                <a href="#" class="transition hover:text-blue-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 transition duration-300 ease-in-out transform -translate-x-full bg-white lg:hidden">
+        <div class="flex items-center justify-between p-4">            
+            <img src="../assets/voilacode-dark-logo.png" width="160px" alt="" class="mt-2">
+            <button id="close-mobile-menu" class="text-2xl">&times;</button>
+        </div>
+        <div class="mt-8">
+            <a href="#" class="block p-2 transition hover:bg-blue-400">Home</a>
+            <a href="#" class="block p-2 transition hover:bg-blue-400">About</a>
+            
+            <div class="relative group">
+                <a href="#" class="block p-2 transition hover:bg-blue-400">Products</a>
+                <!-- First Dropdown -->
+                <div class="absolute hidden mt-2 space-y-2 text-sm bg-blue-500 border border-white services-dropdown left-64 group-hover:block">
+                    <a href="#" class="block px-4 py-2 text-white hover:bg-blue-400">Product 1</a>
+                    <a href="#" class="block px-4 py-2 text-white hover-bg-blue-400">Product 2</a>
+                </div>
+            </div>
+            
+            <div class="relative group">
+                <a href="#" class="block p-2 transition hover:bg-blue-400">Services</a>
+                <!-- Second Dropdown -->
+                <div class="absolute hidden mt-2 space-y-2 text-sm bg-blue-500 border border-white left-64 group-hover:block">
+                    <a href="#" class="block px-4 py-2 text-white hover:bg-blue-400">Product 1</a>
+                    <a href="#" class="block px-4 py-2 text-white hover-bg-blue-400">Product 2</a>
+                </div>
+            </div>
+            <a href="#" class="block p-2 transition hover:bg-blue-400">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const closeMobileMenuButton = document.getElementById("close-mobile-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const servicesDropdown = document.querySelector('.services-dropdown');
+        const productsDropdown = document.querySelector('.products-dropdown');
+
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.remove("transform", "-translate-x-full");
+        });
+
+        closeMobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.add("transform", "-translate-x-full");
+        });
+
+        servicesDropdown.addEventListener('mouseenter', () => {
+            servicesDropdown.classList.remove('hidden');
+        });
+
+        servicesDropdown.addEventListener('mouseleave', () => {
+            servicesDropdown.classList.add('hidden');
+        });
+
+        productsDropdown.addEventListener('mouseenter', () => {
+            productsDropdown.classList.remove('hidden');
+        });
+
+        productsDropdown.addEventListener('mouseleave', () => {
+            productsDropdown.classList.add('hidden');
+        });
+
+    </script>
+</body>
+</html>
