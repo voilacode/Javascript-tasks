@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NavBar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body>
+<nav class="bg-white border-gray-200 shadow-md dark:bg-blue-800">
+  <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
+    <a href="https://www.codewithfaraz.com/" class="flex items-center">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Voilacode</span>
+    </a>
+    <button id="navbar-toggle" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+     
+      <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-blue-400 md:dark:bg-blue-800 ">
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 m-1 bg-blue-700 border-b-4 border-red-500 rounded dark:text-white text-bold md:bg-transparent md:p-0" aria-current="page">Home</a>
+        </li>
+        <li>
+          <div
+      class="flex w-full mx-auto lg:hover:bg-blue-800 rouded-md sm:p-1 sm:rounded-md sm:hover:bg-blue-700"
+    >
+      <div class="relative cursor-pointer group">
+        <div class="flex items-center justify-between space-x-5">
+          <a
+            class="text-base font-medium text-white hover:text-black menu-hover"
+            onClick=""
+          >
+           Services
+          </a>
+          
+        </div>
+        <div
+          class="absolute z-50 flex flex-col invisible w-32 p-2 text-gray-800 bg-yellow-300 rounded-md shadow-xl group-hover:visible"
+          onClick=""
+        >
+          <a
+            class="block p-1 my-2 font-semibold text-gray-900 border-gray-100 rounded-md hover:text-black hover:bg-blue-700"
+            >Developer</a
+          >
+ 
+          <a
+            class="block p-1 my-2 font-semibold text-gray-900 border-gray-100 rounded-md hover:text-black hover:bg-blue-700"
+            >Tester</a
+          >
+          <a
+            class="block p-1 my-2 font-semibold text-gray-900 border-gray-100 rounded-md hover:text-black hover:bg-blue-700"
+            >Frontend
+          </a>
+          <a
+            class="block p-1 my-2 font-semibold text-gray-900 border-gray-100 rounded-md hover:text-black hover:bg-blue-700"
+            >Database
+          </a>
+        </div>
+      </div>
+    </div>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 m-1 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-gray-900 dark:hover:bg-blue-700 dark:hover:text-gray-900 md:dark:hover:bg-transparent">About</a>
+        </li>
+       
+        <li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 m-1 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-black dark:focus:text-white dark:border-gray-700 dark:hover:bg-blue-700 md:dark:hover:bg-transparent">Product <svg class="w-2.5 h-3.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4"/>
+  </svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar" class="absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-23 dark:bg-yellow-300 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-blue-300 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-600 dark:text-black dark:hover:text-black hover:rounded-md">JAVA</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-600 dark:text-black dark:hover:text-black hover:rounded-md">HTML-CSS</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-600 dark:text-black dark:hover:text-black hover:rounded-md">SQL</a>
+                  </li>
+                </ul>
+               
+            </div>
+        </li>
+        </li>
+        <li>
+          <button class="p-1 px-4 bg-yellow-300 rounded-md lg:ml-2 dark:text-blue-800 hover:bg-green-300 hover:text-black">Register</button> 
+         </li>
+         <li>
+           <button class="p-1 px-4 bg-yellow-300 rounded-md lg:ml-2 dark:text-blue-800 hover:bg-green-300 hover:text-black">Login</button> 
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <script src="script.js"></script>
+  </body>
+</html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const button = document.getElementById('navbar-toggle');
+      const menu = document.getElementById('navbar-default');
+    
+      button.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+  const button = document.getElementById('navbar-toggle');
+  const menu = document.getElementById('navbar-dropdown');
+
+  const dropdownButton = document.getElementById('dropdownNavbarLink');
+  const dropdownMenu = document.getElementById('dropdownNavbar');
+
+  dropdownButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+
+  button.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+  });
+});
+
+      
+</script>
