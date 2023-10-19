@@ -10,10 +10,10 @@
 <body>
     <!-- Tab links -->
     <div class="tab overflow-hidden border border-gray-400 bg-gray-100">
-        <p class="tablinks bg-inherit float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="openVersion(event, 'Question')">Question</p>
-        <p class="tablinks bg-inherit float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="openVersion(event, 'Version1')">Version-1</p>
-        <p class="tablinks bg-inherit float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="openVersion(event, 'Version2')">Version-2</p>
-        <p class="tablinks bg-inherit float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="openVersion(event, 'Version3')">Version-3</p>
+        <p class="tabButtons bg-transparent float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="changeVersion(event, 'Question')">Question</p>
+        <p class="tabButtons bg-transparent float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="changeVersion(event, 'Version1')">Version-1</p>
+        <p class="tabButtons bg-transparent float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="changeVersion(event, 'Version2')">Version-2</p>
+        <p class="tabButtons bg-transparent float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="changeVersion(event, 'Version3')">Version-3</p>
     </div>
     
     <!-- Tab content -->
@@ -35,9 +35,9 @@
         <p>Version3 Question Here...</p>
     </div>
     <script>
-        function openVersion(evt, version) {
+        function changeVersion(evt, version) {
         // Declare all variables
-        var i, tabcontent, tablinks;
+        var i, tabcontent, tabButtons;
 
         // Get all elements with class="tabcontent" and hide them
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -45,10 +45,10 @@
             tabcontent[i].style.display = "none";
         }
 
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        // Get all elements with class="tabButtons" and remove the class "active"
+        tabButtons = document.getElementsByClassName("tabButtons");
+        for (i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].className = tabButtons[i].className.replace(" active", "");
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab

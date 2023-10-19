@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Responsive Navbar</title>
+  <style>
+    .links a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #bd190ddf;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+    .links a:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+  <nav class="fixed w-full bg-white shadow-lg z-20 top-0 left-0 ">
+    <div class="max-w-screen-xl px-4 py-3 sm:px-16 flex flex-wrap items-center justify-between mx-auto">
+      <a href="./index.html" class="flex items-center text-xl text-gray-500 font-bold"> Voilacode </a>
+      <div class="flex lg:order-2">
+        <a  class="text-white bg-red-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-md  hover:outline-1 px-2 sm:px-4 lg:py-2 text-center cursor-pointer mr-3 lg:mr-0" >Contact us</a>
+        <button id="navbarToggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden  bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
+        <ul class="links flex flex-col p-4 lg:p-0 mt-4 font-medium lg:text-md rounded-lg lg:flex-row lg:space-x-6 lg:mt-0 lg:border-0  dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 mt-2 pl-3 pr-4  lg:p-0  text-lg text-gray-500 font-semibold">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 mt-2 pl-3 pr-4  lg:p-0 text-lg text-gray-500 font-semibold">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 mt-2 pl-3 pr-4  lg:p-0 text-lg text-gray-500 font-semibold">About</a>
+          </li>
+          <li class="pr-10">
+            <a href="#" class="block py-2 mt-2 pl-3 pr-4  lg:p-0  text-lg text-gray-500 font-semibold">Services</a>
+          </li>
+          <li >
+            <div class=" hidden md:flex">
+                <input type="text" placeholder="Search" class="border p-2 rounded mr-2">
+                <p class="text-white bg-red-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-md  hover:outline-1 px-2 sm:px-4 lg:py-2 text-center cursor-pointer mr-3 lg:mr-0 ">Search</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('navbarToggle').addEventListener('click', function () {
+      document.getElementById('navbar-sticky').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
