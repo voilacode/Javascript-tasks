@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+	<style>
+	  .manohar a :hover+ul{
+		display: block;
+	  }
+	  ul li:hover ul.dropdown{
+        display: block;	/* Display the dropdown */
+	  }
+	
+	</style>
 </head>
 	<body>
 		<!-- Navbar goes here -->
 
         <!--navbar -1 -->
-		<nav class="bg-white shadow-lg">
+		<nav class="bg-white shadow-lg manohar">
 			<div class="max-w-6xl px-4 mx-auto">
 				<div class="flex justify-between">
 					<div class="flex space-x-7">
@@ -21,10 +30,39 @@
 						</div>
 						<!-- Primary Navbar items -->
 						<div class="items-center hidden space-x-1 md:flex">
-							<a href="" class="px-2 py-4 font-semibold text-green-500 border-b-4 border-green-500 ">Home</a>
-							<a href="" class="px-2 py-4 font-semibold text-gray-500 transition duration-300 hover:text-green-500">Services</a>
-							<a href="" class="px-2 py-4 font-semibold text-gray-500 transition duration-300 hover:text-green-500">About</a>
-							<a href="" class="px-2 py-4 font-semibold text-gray-500 transition duration-300 hover:text-green-500">Contact Us</a>
+							<a href="" class="px-2 py-4 font-semibold text-green-500 transition border-b-4 border-green-500 nav">Home</a>
+							<a href="" class="px-2 py-4 font-semibold text-gray-500 transition duration-300 nav hover:text-green-500 " >Services</a>
+							<li style="list-style-type:  none;">
+								<button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between px-2 py-4 font-semibold text-gray-500 transition duration-300 rounded nav hover:text-green-500 ">Product </button>
+								<!-- Dropdown menu -->
+								<div id="dropdownNavbar" class="absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-23 dark:bg-yellow-300 dark:divide-gray-600">
+									<ul class="py-1 text-sm font-bold text-blue-300" aria-labelledby="dropdownLargeButton">
+									  <li>
+										<a href="#" class="block px-4 py-2 m-1 hover:bg-gray-100 dark:hover:bg-blue-600 dark:text-black dark:hover:text-black hover:rounded-md">JAVA</a>
+									  </li>
+									  <li>
+										<a href="#" class="block px-4 py-2 m-1 hover:bg-gray-100 dark:hover:bg-blue-600 dark:text-black dark:hover:text-black hover:rounded-md">HTML-CSS</a>
+									  </li>
+									  <li>
+										<a href="#" class="block px-4 py-2 m-1 hover:bg-gray-100 dark:hover:bg-blue-600 dark:text-black dark:hover:text-black hover:rounded-md">SQL</a>
+									  </li>
+									</ul>
+								   
+								</div>
+							</li>
+						</li>
+							<a href="" class="px-2 py-4 font-semibold text-gray-500 transition duration-300 nav hover:text-green-500">About</a>
+							<div class="relative group">
+								<a href="#" class="px-2 font-semibold text-gray-500 transition nav products">Products</a>
+								<!-- Second Dropdown -->
+								<div class="absolute left-0 hidden mt-2 space-y-1.5 text-sm bg-white border border-gray-200 rounded-lg products-dropdown group-hover:block text-green-500 font-semibold tracking-[0.5px] shadow-xl" style="width: 180%;">
+									<a href="#" class="block px-4 py-2 hover:bg-gray-100">Mobile</a>
+									<a href="#" class="block px-4 py-2 hover:bg-gray-100">web</a>
+									<a href="#" class="block px-4 py-2 hover:bg-gray-100">Gaming</a>
+									<a href="#" class="block px-4 py-2 hover:bg-gray-100">Laptop</a>
+								</div>
+							</div>
+							<a href="" class="px-2 py-4 font-semibold text-gray-500 transition duration-300 nav hover:text-green-500">Contact Us</a>
 						</div>
 					</div>
 					<!-- Secondary Navbar items -->
@@ -52,13 +90,27 @@
 			</div>
 			<!-- mobile menu -->
 			<div class="hidden mobile-menu">
-				<ul class="">
+				<ul class="px-4">
 					<li class="active"><a href="index.html" class="block px-2 py-4 text-sm font-semibold text-white bg-green-500">Home</a></li>
-					<li><a href="#services" class="block px-2 py-4 text-sm transition duration-300 hover:bg-green-500">Services</a></li>
+					<li><a href="#services" class="block px-2 py-4 text-sm transition duration-300 hover:bg-green-500">Services</a>
+						
+							<div class="relative px-2 py-4 group">
+								<a href="#" class="text-sm transition nav products">Products</a>
+								<!-- Second Dropdown -->
+								<div class="absolute left-0 hidden mt-2 space-y-1.5 text-md bg-white border border-gray-200 rounded-lg products-dropdown group-hover:block text-green-500 font-semibold tracking-[0.5px] shadow-xl" style="width: 100%;">
+									<a href="#" class="block px-4 py-2 hover:bg-gray-100">Mobile1</a>
+									<a href="#" class="block px-4 py-2 hover:bg-gray-100">web</a>
+									<a href="#" class="block px-4 py-2 hover:bg-gray-100">Gaming</a>
+									<a href="#" class="block px-4 py-2 hover:bg-gray-100">Laptop</a>
+								</div>
+							</div>
 					<li><a href="#about" class="block px-2 py-4 text-sm transition duration-300 hover:bg-green-500">About</a></li>
 					<li><a href="#contact" class="block px-2 py-4 text-sm transition duration-300 hover:bg-green-500">Contact Us</a></li>
-				</ul>
+                    
+                </ul>
 			</div>
+            
+          
 			<script>
 				const btn = document.querySelector("button.mobile-menu-button");
 				const menu = document.querySelector(".mobile-menu");
@@ -66,11 +118,37 @@
 				btn.addEventListener("click", () => {
 					menu.classList.toggle("hidden");
 				});
+				
+				document.addEventListener('DOMContentLoaded', function () {
+					const button = document.getElementById('navbar-toggle');
+					const menu = document.getElementById('navbar-dropdown');
+				  
+					const dropdownButton = document.getElementById('dropdownNavbarLink');
+					const dropdownMenu = document.getElementById('dropdownNavbar');
+				  
+					dropdownButton.addEventListener('click', () => {
+					  dropdownMenu.classList.remove('hidden');
+					});
+					const products = document.querySelector('.products');
+					button.addEventListener('click', function () {
+					  menu.classList.toggle('hidden');
+					});
+				  });
+				  const productsDropdown = document.querySelector('.products-dropdown');
+				  products.addEventListener('click', () => {
+					productsDropdown.classList.remove('hidden');
+				});
+		
+				products.addEventListener('click', () => {
+					productsDropdown.classList.add('hidden');
+				});
 			</script>
 		</nav>
-		  <!--nav bar-2 -->
-      
+
+
+          
 	</body>
+	
 </html>
 
 
