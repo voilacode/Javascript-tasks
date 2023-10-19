@@ -11,7 +11,7 @@
     <header class="items-center h-full py-3 bg-violet-400">
         <nav class="flex justify-between w-[92%] mx-auto ">
             <div class="mt-2">
-                <img src="/src/assets/voilacode1.png" alt="voilacode" class="h-6 md:h-24 rounde-lg">
+                <img src="/src/assets/voilacode.jpg" alt="voilacode" class="h-6 md:h-10 rounde-lg">
             </div>
             <div class="hidden mt-3 md:block">
                 <ul class=" hidden    md:flex gap-[4vw]   md:bg-transparent w-[100%]">
@@ -24,8 +24,17 @@
                             class="text-lg font-semibold text-white hover:text-violet-900 hover:transition-all">about</a>
                     </li>
                     <li class="" onmouseover="showDropdown('dropdown1')" onmouseout="hideDropdown('dropdown1')">
-                        <button class="text-lg font-semibold text-white hover:text-violet-900 hover:transition-all">
-                            Services
+                        <button
+                            class="text-lg font-semibold text-white transition-all duration-500 ease-in-out hover:text-violet-900 hover:transition-all">
+                            <span class="flex">Services
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                                    stroke="currentColor" class="w-5 h-5 mt-1 ml-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+
+                            </span>
+
                         </button>
                         <div class="absolute items-center hidden bg-white rounded shadow-lg w-28 dropdown1">
                             <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Service 1</a>
@@ -35,15 +44,24 @@
                     </li>
                     <li onmouseover="showDropdown('dropdown2')" onmouseout="hideDropdown('dropdown2')">
                         <button class="text-lg font-semibold text-white hover:text-violet-900 hover:transition-all">
-                            Contacts
+                            <span class="flex">Contacts
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                                    stroke="currentColor" class="w-5 h-5 mt-1 ml-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+
+                            </span>
                         </button>
-                        <div class="absolute items-center hidden transition-all duration-1000 ease-in-out bg-white rounded shadow-lg w-28 dropdown2">
+                        <div
+                            class="absolute items-center hidden transition-all duration-1000 ease-in-out bg-white rounded shadow-lg w-28 dropdown2">
                             <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 1</a>
                             <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 2</a>
                             <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 3</a>
                         </div>
                     </li>
                 </ul>
+
             </div>
 
             <div class="hidden mt-1 md:mt-2 md:block">
@@ -51,55 +69,84 @@
                     class="px-4 py-2 text-lg font-semibold text-center text-white rounded-full bg-gradient-to-r from-violet-700 to-blue-400 hover:from-violet-600 hover:to-blue-300 hover:transition-all">login</button>
             </div>
             <div class="block mt-1 md:hidden" id="nav-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" height="2.2em" viewBox="0 0 448 512" class="p-2 border border-white hover:opacity-60">
+                <svg id="icon1" onclick="toggleIcons()" xmlns="http://www.w3.org/2000/svg" height="2.2em"
+                    viewBox="0 0 448 512" class="p-2 border border-white hover:opacity-60 " class="hidden">
                     <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <path
-                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" fill="white" />
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                        fill="white" />
                 </svg>
+                <span class="hidden" id="icon2" onclick="toggleIcons()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="block" height="2em" viewBox="0 0 384 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                            fill="white" />
+                    </svg>
+                </span>
             </div>
         </nav>
         <div class="px-5 py-2">
-            <ul class="flex justify-between hidden w-full px-4 py-2 border bg-violet-400 border-violet-600" id="mobile-nav-content">
+            <ul class="flex justify-between hidden w-full px-4 py-2 border bg-violet-400 border-violet-600"
+                id="mobile-nav-content">
                 <div>
-                <li>
-                    <a href="#"
-                        class="text-lg font-semibold text-white hover:text-violet-900 hover:transition-all">Home</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="text-lg font-semibold text-white duration-500 ease-in hover:text-violet-900 hover:transition-all">about</a>
-                </li>
-                <li class="" onmouseover="showDropdown('dropdown3')" onmouseout="hideDropdown('dropdown3')">
-                    <button class="text-lg font-semibold text-white duration-500 ease-in hover:text-violet-900 hover:transition-all">
-                        Services
-                    </button>
-                    <div class="absolute items-center hidden ml-10 bg-white rounded shadow-lg w-28 dropdown3">
-                        <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Service 1</a>
-                        <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Service 2</a>
-                        <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Service 3</a>
-                    </div>
-                </li>
-                <li onmouseover="showDropdown('dropdown4')" onmouseout="hideDropdown('dropdown4')" >
-                    <button class="text-lg font-semibold text-white duration-500 ease-in hover:text-violet-900 hover:transition-all ">
-                        Contacts
-                    </button>
-                    <div class="absolute items-center hidden bg-white rounded shadow-lg w-28 dropdown4">
-                        <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 1</a>
-                        <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 2</a>
-                        <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 3</a>
-                    </div>
-                </li>
-            </div>
+                    <li>
+                        <a href="#"
+                            class="text-lg font-semibold text-white hover:text-violet-900 hover:transition-all">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-lg font-semibold text-white duration-500 ease-in hover:text-violet-900 hover:transition-all">about</a>
+                    </li>
+                    <li class="" onmouseover="showDropdown('dropdown3')" onmouseout="hideDropdown('dropdown3')">
+                        <button
+                            class="text-lg font-semibold text-white duration-500 ease-in hover:text-violet-900 hover:transition-all">
+                            <span class="flex">Services
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                                    stroke="currentColor" class="w-5 h-5 mt-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+
+                            </span>
+
+                        </button>
+                        <div class="absolute items-center hidden ml-10 bg-white rounded shadow-lg w-28 dropdown3">
+                            <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Service 1</a>
+                            <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Service 2</a>
+                            <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Service 3</a>
+                        </div>
+                    </li>
+                    <li onmouseover="showDropdown('dropdown4')" onmouseout="hideDropdown('dropdown4')">
+                        <button
+                            class="text-lg font-semibold text-white duration-500 ease-in hover:text-violet-900 hover:transition-all ">
+                            <span class="flex">Contacts
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                                    stroke="currentColor" class="w-5 h-5 mt-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+
+                            </span>
+                        </button>
+                        <div class="absolute items-center hidden bg-white rounded shadow-lg w-28 dropdown4">
+                            <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 1</a>
+                            <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 2</a>
+                            <a href="#" class="block p-4 text-black text-decoration-none hover:bg-sky-300">Contact 3</a>
+                        </div>
+                    </li>
+                </div>
                 <div>
-                <li class="py-3 ml-0">
-                    <button
-                    class="px-4 py-2 text-lg font-semibold text-center text-white rounded-full bg-gradient-to-r from-violet-700 to-blue-400 hover:from-violet-600 hover:to-blue-300 hover:transition-all">login</button> 
-                </li>
-            </div>
+                    <li class="py-3 ml-0">
+                        <button
+                            class="px-4 py-2 text-lg font-semibold text-center text-white rounded-full bg-gradient-to-r from-violet-700 to-blue-400 hover:from-violet-600 hover:to-blue-300 hover:transition-all">login</button>
+                    </li>
+                </div>
             </ul>
         </div>
-       
+
     </header>
+
     <script>
         function showDropdown(className) {
             const elements = document.getElementsByClassName(className);
@@ -119,6 +166,25 @@
             if (mobileNavContent.classList.contains('hidden')) {
                 mobileNavContent.classList.remove('hidden');
             } else {
+                mobileNavContent.classList.add('hidden');
+            }
+        });
+
+        function toggleIcons() {
+            const icon1 = document.getElementById('icon1');
+            const icon2 = document.getElementById('icon2');
+
+            if (icon1.style.display !== 'none') {
+                icon1.style.display = 'none';
+                icon2.style.display = 'inline';
+            } else {
+                icon2.style.display = 'none';
+                icon1.style.display = 'inline';
+            }
+        }
+        window.addEventListener('resize', function () {
+            const mobileNavContent = document.getElementById('mobile-nav-content');
+            if (window.innerWidth > 768) {
                 mobileNavContent.classList.add('hidden');
             }
         });
