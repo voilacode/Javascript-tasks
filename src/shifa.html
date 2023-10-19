@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  
   <style type="text/tailwindcss">
     @layer utilities {
         .nav {
@@ -22,7 +24,7 @@
   </style>
 </head>
 
-<body class="">
+<body>
     <!-- Navbar -->
     <nav class="bg-white shadow-xl">
         <div class="flex items-center justify-between max-w-screen-xl p-4 mx-auto sm:px-10">
@@ -34,13 +36,14 @@
                     &#9776; <!-- Hamburger icon -->
                 </button>
             </div>
+            <!--list elements-->
             <div class="hidden space-x-4 lg:flex">
                 <a href="#" class="transition nav">Home</a>
                 <a href="#" class="transition nav">About</a>
                 
                 <div class="relative group">
                     <a href="#" class="transition nav products">Products</a>
-                    <!-- Second Dropdown -->
+                    <!-- First Dropdown -->
                     <div class="absolute left-0 hidden mt-2 space-y-1.5 text-md bg-white border border-gray-200 rounded-lg products-dropdown group-hover:block text-green-500 font-semibold tracking-[0.5px] shadow-xl" style="width: 180%;">
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">Product 1</a>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">Product 2</a>
@@ -51,7 +54,7 @@
                 
                 <div class="relative group">
                     <a href="#" class="transition nav services">Services</a>
-                    <!-- First Dropdown -->
+                    <!-- Second Dropdown -->
                     <div class="absolute left-0 hidden mt-2 space-y-1.5 text-md bg-white border border-gray-200 rounded-lg services-dropdown group-hover:block text-green-500 font-semibold tracking-[0.5px] shadow-xl" style="width: 180%;">
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 1</a>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 2</a>
@@ -66,16 +69,18 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 transition duration-300 ease-in-out transform -translate-x-full bg-white lg:hidden">
-        <div class="flex items-center justify-between p-4">            
-            <img src="../assets/voilacode-dark-logo.png" width="160px" alt="" class="mt-2">
+        <div class="flex items-center justify-end p-4">            
+            <!-- <img src="../assets/voilacode-dark-logo.png" width="160px" alt="" class="mt-2"> -->
+            <!-- close button-->
             <button id="close-mobile-menu" class="text-2xl">&times;</button>
         </div>
-        <div class="mt-8">
+        <div class="mt-4">
             <a href="#" class="block p-2 ps-6 transition hover:bg-violet-700 hover:text-white duration-500 font-poppins tracking-[1px] font-semibold text-gray-600">Home</a>
             <a href="#" class="block p-2 ps-6 transition hover:bg-violet-700 hover:text-white duration-500 font-poppins tracking-[1px] font-semibold text-gray-600">About</a>
             
             <div class="relative group">
-                <a href="#" class="block p-2 ps-6 transition hover:bg-violet-700 hover:text-white duration-500 font-poppins tracking-[1px] font-semibold text-gray-600">Products</a>
+                <a href="#" class="block p-2 ps-6 transition hover:bg-violet-700 hover:text-white duration-500 font-poppins tracking-[1px] font-semibold text-gray-600">Products
+                </a>
                 <!-- First Dropdown -->
                 <div class="absolute left-0 hidden mt-2 space-y-1.5 text-md bg-white border border-gray-200 rounded-lg products-dropdown group-hover:block text-green-700 font-semibold tracking-[0.5px] shadow-xl z-10" style="width: 100%;">
                     <a href="#" class="block px-4 py-2 hover:bg-gray-100">Product 1</a>
@@ -87,7 +92,7 @@
             
             <div class="relative group">
                 <a href="#" class="block p-2 ps-6 transition hover:bg-violet-700 hover:text-white z-0 duration-500 font-poppins tracking-[1px] font-semibold text-gray-600">Services</a>
-                <!-- First Dropdown -->
+                <!-- Second Dropdown -->
                 <div class="absolute left-0 hidden mt-2 space-y-1.5 text-md bg-white border border-gray-200 rounded-lg services-dropdown group-hover:block text-green-700 font-semibold tracking-[0.5px] shadow-xl" style="width: 100%;">
                     <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 1</a>
                     <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 2</a>
@@ -108,28 +113,24 @@
         const services = document.querySelector('.services');
         const products = document.querySelector('.products');
 
-        mobileMenuButton.addEventListener("click", () => {
-            mobileMenu.classList.remove("transform", "-translate-x-full");
-        });
+        // hamburger menu toggle behavior
+        function toggleMobileMenu() {
+            if (mobileMenu.classList.contains('transform')) {
+                mobileMenu.classList.remove('transform', '-translate-x-full');
+            } else {
+                mobileMenu.classList.add('transform', '-translate-x-full');
+            }
+        }
 
-        closeMobileMenuButton.addEventListener("click", () => {
-            mobileMenu.classList.add("transform", "-translate-x-full");
-        });
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        closeMobileMenuButton.addEventListener('click', toggleMobileMenu);
 
         services.addEventListener('click', () => {
             servicesDropdown.classList.remove('hidden');
         });
 
-        services.addEventListener('click', () => {
-            servicesDropdown.classList.add('hidden');
-        });
-
         products.addEventListener('click', () => {
             productsDropdown.classList.remove('hidden');
-        });
-
-        products.addEventListener('click', () => {
-            productsDropdown.classList.add('hidden');
         });
 
     </script>
