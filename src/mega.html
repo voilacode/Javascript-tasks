@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="">
+  <header>
+  <nav class=" container-fluid mx-auto lg:px-16 bg-white py-3 px-2 shadow md:flex md:items-center md:justify-between ">
+    <div class="flex justify-between items-center">
+      <span class="text-2xl font-[poppins]">
+        <img src="../favicon (1).svg" class="h-10 inline">Voilacode
+      </span>
+      <span class="text-3xl cursor-pointer md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)" name="menu"></ion-icon>
+      </span>
+    </div>
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0  md:w-auto md:py-0 py-2 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-3 my-4 md:my-0">
+        <a href="#" class="block py-2 font-medium text-gray-500 hover:text-red-500 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">HOME</a>
+
+      </li>
+    
+      <li class="mx-3 my-4 md:my-0">
+        <div class="relative inline-block text-left group">
+          <div id="dropdown-trigger-1" class="cursor-pointer hover:text-red-500  transform scale-100 hover:scale-105 transition-transform duration-150 font-medium text-gray-500 ">ABOUT</div>
+      
+          <div id="dropdown-menu-1" class="  absolute right-10 left-0 top-16 w-72 md:right-0 hidden font-normal bg-white   shadow  dark:bg-gray-700 dark:divide-gray-600 border border-gray-200 duration-500">
+            <ul class="py-2 text-base text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                <li class="border-b border-slate-300">
+                  <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                    <img src="https://livetech.in/images/about-menu-image.png" alt="">
+                    <div>
+                      <p class="text-base font-medium font-sans">About LiveTech</p>
+                      <p class="text-xs fnt-sans text-slate-500">Our History</p>
+                    </div>
+                  </a> 
+                </li>
+                <li class="border-b border-slate-300">
+                  <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                    <img src="https://livetech.in/images/about-menu-image1.png" alt="">
+                    <div>
+                      <p class="text-base font-medium font-sans">Our Infrastructure</p>
+                      <p class="text-xs fnt-sans text-slate-500">Our Environment</p>
+                    </div>
+                  </a> 
+                </li> 
+                <li class="border-b border-slate-300">
+                  <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                    <img src="https://livetech.in/images/about-menu-image2.png" alt="">
+                    <div>
+                      <p class="text-base font-medium font-sans">Management Team</p>
+                      <p class="text-xs fnt-sans text-slate-500">The Core Team</p>
+                    </div>
+                  </a> 
+                </li>
+                <li class="">
+                  <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                    <img src="https://livetech.in/images/about-menu-image3.png" alt="">
+                    <div>
+                      <p class="text-base font-medium font-sans">Why Choose LiveTech</p>
+                      <p class="text-sm fnt-sans text-slate-500">The benfits with us</p>
+                    </div>
+                  </a> 
+                </li>
+              </ul>
+          </div>
+      </div>
+      </li>
+      <li>          
+        <button id="dropdown-trigger-2" data-dropdown-toggle="dropdown" class="cursor-pointer hover:text-red-500  transform scale-100 hover:scale-105 transition-transform duration-150 font-medium text-gray-500" type="button">COURSES</button></a>
+        <!-- Dropdown menu -->
+        <div id="dropdown-menu-2"  class=" absolute right-10 top-20  hidden font-normal bg-white   shadow p-5 dark:bg-gray-700 dark:divide-gray-600 border border-gray-200">
+         <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-6">
+          <!----div1-->
+          <div>
+            <h1 class="text-lg font-sans text-slate-500">Functional Testing Programs</h1>
+        <hr class="mt-3 w-96">
+        <a href=""> <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/menu-image13.png" alt="">
+        <div>
+          <p class="text-lg font-medium font-sans">
+            Testing Tools
+           </p>
+          <p class="text-sm font-sans text-slate-500"> Functional Test Engineer</p>
+        </div>
+        </div></a>
+        <hr class="mt-3 w-96">
+        
+        
+        <a href=""> <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/menu-image14.png" alt="">
+        <div>
+          <p class="text-lg font-medium font-sans">
+           
+        Manual Testing
+        
+           </p>
+          <p class="text-sm font-sans text-slate-500"> Manual Test Engineer</p>
+        </div>
+        </div></a>
+        
+        <hr class="mt-3 w-96">
+        
+        
+        <a href=""> <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/menu-image12.png" alt="">
+        <div>
+          <p class="text-lg font-medium font-sans">
+           
+        
+            Selenium Testing
+           
+           </p>
+          <p class="text-sm font-sans text-slate-500">  Automation Test Engineer</p>
+        </div>
+        </div></a>
+        
+        <hr class="mt-3 w-96">
+          </div>
+          
+        <!----div2-->
+         
+         <div>
+          <h1 class="text-lg font-sans text-slate-500">Web Services and ETL Programs</h1>
+        <hr class="mt-3 w-96">
+        <a href=""> <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image11.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans">
+          
+        API Testing
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500">API Test Engineer</p>
+        </div>
+        </div></a>
+        <hr class="mt-3 w-96">
+        
+        
+        <a href=""> <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image10.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans">
+         
+        
+          ETL Testing
+        
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500">  ETL Test Engineer</p>
+        </div>
+        </div></a> 
+        
+        <hr class="mt-3 w-96">
+        
+        
+         <a href=""> <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image9.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans">
+         TOSCA
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500">TOSCA Test Engineer
+        </p>
+        </div>
+        </div></a>
+        
+        <hr class="mt-3 w-96">
+        </div>
+        <!-----div3-->
+        <div>
+          <h1 class="text-lg font-sans text-slate-500">Performance Testing Programs</h1>
+        <hr class="mt-3 w-96">
+        <a href="">  <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image8.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans">
+          
+        
+          LoadRunner
+        
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500">  Performance Test Engineer</p>
+        </div>
+        </div></a>
+        <hr class="mt-3 w-96">
+        
+        
+        <a href=""> <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image7.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans">
+         
+        
+          ETL Testing
+        
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500">  ETL Test Engineer</p>
+        </div>
+        </div></a>
+        
+        <hr class="mt-3 w-96">
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </li> 
+        <li class="mx-3 my-4 md:my-0">
+          <a href="#" class="block py-2 font-medium text-gray-500 hover:text-red-500 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">PLACEMENTS</a>
+          </li>
+      
+        <li class="mx-3 my-4 md:my-0">
+          <a href="#" class="block py-2 font-medium text-gray-500 hover:text-red-500 rounded md:p-0 transform scale-100 hover:scale-105 transition-transform duration-150" aria-current="page">CONTACT</a>
+          </li>
+     
+    </ul>
+  </nav>
+</header>
+  <script>
+    function Menu(e) {
+      let list = document.querySelector('ul');
+      if (e.getAttribute('name') === 'menu') {
+        e.setAttribute('name', 'close');
+        list.classList.add('top-[80px]');
+        list.classList.add('opacity-100');
+      } else {
+        e.setAttribute('name', 'menu');
+        list.classList.remove('top-[80px]');
+        list.classList.remove('opacity-100');
+      }
+    }
+    function setupDropdown(dropdownTriggerId, dropdownMenuId) {
+        const dropdownTrigger = document.getElementById(dropdownTriggerId);
+        const dropdownMenu = document.getElementById(dropdownMenuId);
+        let dropdownTimeout;
+
+        function showDropdown() {
+            clearTimeout(dropdownTimeout);
+            dropdownMenu.classList.remove('hidden');
+            dropdownMenu.classList.add('block');
+        }
+
+        function hideDropdown() {
+            dropdownTimeout = setTimeout(() => {
+                dropdownMenu.classList.remove('block');
+                dropdownMenu.classList.add('hidden');
+            },100); // Adjust the delay as needed (in milliseconds)
+        }
+
+        dropdownTrigger.addEventListener('mouseenter', showDropdown);
+        dropdownTrigger.addEventListener('mouseleave', hideDropdown);
+
+        dropdownMenu.addEventListener('mouseenter', showDropdown);
+        dropdownMenu.addEventListener('mouseleave', hideDropdown);
+    }
+
+    setupDropdown('dropdown-trigger-1', 'dropdown-menu-1');
+    setupDropdown('dropdown-trigger-2', 'dropdown-menu-2');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css"  rel="stylesheet" />
+    <title>Mega menu</title>
+</head>
+<body>
+    <header class="">
+        <nav class="bg-white fixed w-full shadow-md z-20 top-0 left-0   border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+           
+            <a href="#" class="flex items-center text-3xl text-blue-500 font-bold ">LiveTech
+                 
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+              <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-4 lg:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                  <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-blue-500">
+                      <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                      <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                    </svg>
+                    
+                  </a>
+                </li>
+                <li>
+                 <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded  md:hover:bg-transparent md:border-0  md:p-0 md:w-20 dark:text-white hover:text-red-600 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-medium hover:underline">ABOUT US </button></a>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar" class="z-10 absolute my-3 hidden font-normal bg-white divide-y divide-gray-100  shadow w-72 dark:bg-gray-700 dark:divide-gray-600 border border-gray-200">
+                                <ul class="py-2 text-base text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                                  <li class="border-b border-slate-300">
+                                    <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                                      <img src="https://livetech.in/images/about-menu-image.png" alt="">
+                                      <div>
+                                        <p class="text-base font-medium font-sans">About LiveTech</p>
+                                        <p class="text-xs fnt-sans text-slate-500">Our History</p>
+                                      </div>
+                                    </a> 
+                                  </li>
+                                  <li class="border-b border-slate-300">
+                                    <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                                      <img src="https://livetech.in/images/about-menu-image1.png" alt="">
+                                      <div>
+                                        <p class="text-base font-medium font-sans">Our Infrastructure</p>
+                                        <p class="text-xs fnt-sans text-slate-500">Our Environment</p>
+                                      </div>
+                                    </a> 
+                                  </li> 
+                                  <li class="border-b border-slate-300">
+                                    <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                                      <img src="https://livetech.in/images/about-menu-image2.png" alt="">
+                                      <div>
+                                        <p class="text-base font-medium font-sans">Management Team</p>
+                                        <p class="text-xs fnt-sans text-slate-500">The Core Team</p>
+                                      </div>
+                                    </a> 
+                                  </li>
+                                  <li class="">
+                                    <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                                      <img src="https://livetech.in/images/about-menu-image3.png" alt="">
+                                      <div>
+                                        <p class="text-base font-medium font-sans">Why Choose LiveTech</p>
+                                        <p class="text-sm fnt-sans text-slate-500">The benfits with us</p>
+                                      </div>
+                                    </a> 
+                                  </li>
+                                </ul>
+                
+                            </div>
+                </li>
+                <!------------>
+                <li>
+         <li>          
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:w-20 dark:text-white hover:text-red-600 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-medium hover:underline" type="button">COURSES</button></a>
+        <!-- Dropdown menu -->
+        <div id="dropdown" class="z-10 absolute right-3 my-3  hidden font-normal bg-white divide-y divide-gray-100  shadow p-5 dark:bg-gray-700 dark:divide-gray-600 border border-gray-200">
+         <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-6">
+          <!----div1-->
+          <div>
+            <h1 class="text-lg font-sans text-slate-500">Functional Testing Programs</h1>
+        <hr class="mt-3 w-96">
+        <a href=""> 
+            <div class="flex mt-3 gap-3 ">
+          <img src="https://livetech.in/images/menu-image13.png" alt="">
+        <div>
+          <p class="text-lg font-medium font-sans hover:text-blue-500">
+            Testing Tools
+           </p>
+          <p class="text-sm font-sans text-slate-500 hover:text-blue-500"> Functional Test Engineer</p>
+        </div>
+        </div></a>
+        <hr class="mt-3 w-96">
+        
+        
+        <a href="" class=""> <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/menu-image14.png" alt="">
+        <div class="">
+          <p class="text-lg font-medium font-sans hover:text-blue-500">
+           
+        Manual Testing
+        
+           </p>
+          <p class="text-sm font-sans text-slate-500 hover:text-blue-500"> Manual Test Engineer</p>
+        </div>
+        </div></a>
+        
+        <hr class="mt-3 w-96">
+        
+        
+        <a href=""> <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/menu-image12.png" alt="">
+        <div>
+          <p class="text-lg font-medium font-sans hover:text-blue-500">
+           
+        
+            Selenium Testing
+           
+           </p>
+          <p class="text-sm font-sans text-slate-500 hover:text-blue-500">  Automation Test Engineer</p>
+        </div>
+        </div></a>
+        
+        <hr class="mt-3 w-96">
+          </div>
+          
+        <!----div2-->
+         
+         <div>
+          <h1 class="text-lg font-sans text-slate-500 ">Web Services and ETL Programs</h1>
+        <hr class="mt-3 w-96">
+        <a href=""> <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image11.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans hover:text-blue-500" >
+          
+        API Testing
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500 hover:text-blue-500">API Test Engineer</p>
+        </div>
+        </div></a>
+        <hr class="mt-3 w-96">
+        
+        
+        <a href=""> <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image10.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans hover:text-blue-500">
+         
+        
+          ETL Testing
+        
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500 hover:text-blue-500">  ETL Test Engineer</p>
+        </div>
+        </div></a> 
+        
+        <hr class="mt-3 w-96">
+        
+        
+         <a href=""> <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image9.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans hover:text-blue-500">
+         TOSCA
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500 hover:text-blue-500">TOSCA Test Engineer
+        </p>
+        </div>
+        </div></a>
+        
+        <hr class="mt-3 w-96">
+        </div>
+        <!-----div3-->
+        <div>
+          <h1 class="text-lg font-sans text-slate-500">Performance Testing Programs</h1>
+        <hr class="mt-3 w-96">
+        <a href="">  <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image8.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans hover:text-blue-500">
+          
+        
+          LoadRunner
+        
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500 hover:text-blue-500">  Performance Test Engineer</p>
+        </div>
+        </div></a>
+        <hr class="mt-3 w-96">
+        
+        
+        <a href=""> <div class="flex mt-3 gap-3">
+        <img src="https://livetech.in/images/menu-image7.png" alt="">
+        <div>
+        <p class="text-lg font-medium font-sans hover:text-blue-500">
+         
+        
+          ETL Testing
+        
+        
+         </p>
+        <p class="text-sm font-sans text-slate-500 hover:text-blue-500">  ETL Test Engineer</p>
+        </div>
+        </div></a>
+        
+        <hr class="mt-3 w-96">
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </li> 
+        <!----list3-->
+        
+        
+      <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation"  class="flex items-center justify-between w-72 py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:w-auto dark:text-white hover:text-red-600 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-medium hover:underline" type="button">NEW BATCHES </button></a> 
+        
+        <!-- Dropdown menu -->
+        <div id="dropdownInformation"  class="z-10 absolute md:top-14 md:right-32 hidden font-normal bg-white divide-y divide-gray-100  shadow w-72 dark:bg-gray-700 dark:divide-gray-600 border border-gray-200">
+          
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownInformationButton">
+            <li class="border-b border-slate-300">
+              <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                <img src="https://livetech.in/images/class-room-menu.png" alt="">
+                <div>
+                  <p class="text-base font-medium font-sans">Classroom Training</p>
+                  <p class="text-sm fnt-sans text-slate-500">Offline Training</p>
+                </div>
+              </a> 
+            </li>
+            <li class="border-b border-slate-300">
+              <a href="#" class="flex gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+                <img src="https://livetech.in/images/online-traing-image.png" alt="">
+                <div>
+                  <p class="text-base font-medium font-sans">Online Training</p>
+                  <p class="text-sm fnt-sans text-slate-500">Online Training</p>
+                </div>
+              </a> 
+            </li>
+           
+          </ul>
+         
+        </div>
+        </li>
+        <!----list3-->
+        <li>
+       <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper" type="button"  class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:w-auto dark:text-white hover:text-red-600 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-medium hover:underline">PLACEMENTS</button></a>
+        
+        <!-- Dropdown menu -->
+        <div id="dropdownHelper"class="z-10 absolute md:right-3 my-3 hidden font-normal bg-white divide-y divide-gray-100  shadow p-5 dark:bg-gray-700 dark:divide-gray-600 border border-gray-200">
+          
+          <div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-6">
+            <!----div1-->
+            <div class="">
+              <a href="">  
+          <div class="flex mt-3 gap-3">
+          
+              <img src="https://livetech.in/images/placement-menu-image1.png" alt="">
+          <div>
+            <p class="text-lg font-medium font-sans hover:text-red-500">
+              
+        Placed Students
+        
+             </p>
+            <p class="text-sm font-sans text-slate-500 hover:text-blue-500"> Students Recently Placed</p>
+          </div>
+           
+          </div>
+        </a>
+          <hr class="mt-3 w-96">
+          
+          <a href="">
+          <div class="flex mt-3 gap-3">
+           
+              <img src="https://livetech.in/images/placement-menu-image2.png" alt="">
+          <div>
+            <p class="text-lg font-medium font-sans hover:text-red-500">
+             
+        
+              Recruitment Partners
+             </p>
+            <p class="text-sm font-sans text-slate-500 hover:text-blue-500"> Our Top Avocation Partners</p>
+          </div>
+           
+          </div>
+        </a>
+        
+          <hr class="mt-3 w-96">
+          
+          <a href="">
+          <div class="flex mt-3 gap-3">
+          
+            <img src="https://livetech.in/images/placement-menu-image3.png" alt="">
+          <div>
+            <p class="text-lg font-medium font-sans hover:text-red-500">
+             
+          
+        Hire From Us
+        
+             </p>
+            <p class="text-sm font-sans text-slate-500 hover:text-blue-500">We Can Help You Hire</p>
+          </div>
+         
+          </div>
+        </a> 
+        
+          <hr class="mt-3 w-96">
+            </div>
+            
+          <!----div2-->
+           
+           <div>
+        <a href="">
+          <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/placement-menu-image4.png" alt="">
+          <div>
+          <p class="text-lg font-medium font-sans hover:text-red-500">
+           Resumes & Cover Letters
+        </p>
+          <p class="text-sm font-sans text-slate-500 hover:text-blue-500">Download Resumes and Cover Letters </p>
+          </div>
+          </div>
+        </a>
+          <hr class="mt-3 w-96">
+          
+          <a href="">
+          <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/placement-menu-image5.png" alt="">
+          <div>
+          <p class="text-lg font-medium font-sans hover:text-red-500">
+           
+          
+        Interview Questions
+        
+          </p>
+          <p class="text-sm font-sans text-slate-500 hover:text-blue-500">Download The Interview Questions</p>
+          </div>
+          </div></a>
+          
+          <hr class="mt-3 w-96">
+          
+          <a href="">
+          <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/placement-menu-image6.png" alt="">
+          <div>
+          <p class="text-lg font-medium font-sans hover:text-red-500">
+         
+        Community Groups
+        </p>
+          <p class="text-sm font-sans text-slate-500 hover:text-blue-500">Add Into Community
+          </p>
+          </div>
+          </div>
+         </a> 
+          <hr class="mt-3 w-96">
+          </div>
+          <!-----div3-->
+          <div>
+           <a href="">
+          <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/placement-menu-image7.png" alt="">
+          <div>
+          <p class="text-lg font-medium font-sans hover:text-red-500">
+            
+        Blog
+         </p>
+          <p class="text-sm font-sans text-slate-500 hover:text-blue-500">For Current Openings</p>
+          </div>
+          </div></a>
+          <hr class="mt-3 w-96">
+          
+          <a href="">
+          <div class="flex mt-3 gap-3">
+          <img src="https://livetech.in/images/placement-menu-image8.png" alt="">
+          <div>
+          <p class="text-lg font-medium font-sans hover:text-red-500">
+           Current Openings
+          
+        </p>
+          <p class="text-sm font-sans text-slate-500 hover:text-blue-500"> We Provide Openings for Students</p>
+          </div>
+          </div></a>
+          
+          <hr class="mt-3 w-96">
+          </div>
+          </div>
+          </div>
+        </li> 
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:underline">
+        
+            CONTACT US
+          </a>
+        </li>
+        
+        </ul>
+        </div>
+        </div>
+        </nav>
+      
+      </header>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const toggleButton = document.querySelector('[data-collapse-toggle]');
+          const navbarDropdown = document.getElementById('navbar-dropdown');
+      
+          toggleButton.addEventListener('click', function() {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+      
+            if (isExpanded) {
+              // Close the menu
+              toggleButton.setAttribute('aria-expanded', 'false');
+              navbarDropdown.style.display = 'none';
+            } else {
+              // Open the menu
+              toggleButton.setAttribute('aria-expanded', 'true');
+              navbarDropdown.style.display = 'block';
+            }
+          });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+    const dropdownButton = document.getElementById('dropdownNavbarLink');
+    const dropdownMenu = document.getElementById('dropdownNavbar');
+
+    // Show the dropdown on button hover
+    dropdownButton.addEventListener('mouseenter', function() {
+      dropdownMenu.style.display = 'block';
+    });
+
+    // Hide the dropdown when the mouse leaves the button or the dropdown
+    dropdownButton.addEventListener('mouseleave', function(e) {
+      if (!isMouseOverElement(e, dropdownButton) && !isMouseOverElement(e, dropdownMenu)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+
+    dropdownMenu.addEventListener('mouseleave', function(e) {
+      if (!isMouseOverElement(e, dropdownButton) && !isMouseOverElement(e, dropdownMenu)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+
+    function isMouseOverElement(e, element) {
+      const rect = element.getBoundingClientRect();
+      return e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdownButton = document.getElementById('dropdownDefaultButton');
+    const dropdownMenu = document.getElementById('dropdown');
+
+    // Show the dropdown on button hover
+    dropdownButton.addEventListener('mouseenter', function() {
+      dropdownMenu.style.display = 'block';
+    });
+
+    // Hide the dropdown when the mouse leaves the button or the dropdown
+    dropdownButton.addEventListener('mouseleave', function(e) {
+      if (!isMouseOverElement(e, dropdownButton) && !isMouseOverElement(e, dropdownMenu)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+
+    dropdownMenu.addEventListener('mouseleave', function(e) {
+      if (!isMouseOverElement(e, dropdownButton) && !isMouseOverElement(e, dropdownMenu)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+
+    function isMouseOverElement(e, element) {
+      const rect = element.getBoundingClientRect();
+      return e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdownButton = document.getElementById('dropdownInformationButton');
+    const dropdownMenu = document.getElementById('dropdownInformation');
+
+    // Show the dropdown on button hover
+    dropdownButton.addEventListener('mouseenter', function() {
+      dropdownMenu.style.display = 'block';
+    });
+
+    // Hide the dropdown when the mouse leaves the button or the dropdown
+    dropdownButton.addEventListener('mouseleave', function(e) {
+      if (!isMouseOverElement(e, dropdownButton) && !isMouseOverElement(e, dropdownMenu)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+
+    dropdownMenu.addEventListener('mouseenter', function() {
+      dropdownMenu.style.display = 'block';
+    });
+
+    dropdownMenu.addEventListener('mouseleave', function(e) {
+      if (!isMouseOverElement(e, dropdownButton) && !isMouseOverElement(e, dropdownMenu)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+
+    function isMouseOverElement(e, element) {
+      const rect = element.getBoundingClientRect();
+      return e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const placementsButton = document.getElementById('dropdownHelperButton');
+    const placementsMenu = document.getElementById('dropdownHelper');
+    const contactLink = document.querySelector('a[href="#CONTACT US"]');
+
+    // Show the placements dropdown on button hover
+    placementsButton.addEventListener('mouseenter', function() {
+      placementsMenu.style.display = 'block';
+    });
+
+    // Hide the placements dropdown when the mouse leaves the button or the menu
+    placementsButton.addEventListener('mouseleave', function(e) {
+      if (!isMouseOverElement(e, placementsButton) && !isMouseOverElement(e, placementsMenu)) {
+        placementsMenu.style.display = 'none';
+      }
+    });
+
+    placementsMenu.addEventListener('mouseenter', function() {
+      placementsMenu.style.display = 'block';
+    });
+
+    placementsMenu.addEventListener('mouseleave', function(e) {
+      if (!isMouseOverElement(e, placementsButton) && !isMouseOverElement(e, placementsMenu)) {
+        placementsMenu.style.display = 'none';
+      }
+    });
+
+    // Hide the placements dropdown when the mouse leaves the contact link
+    contactLink.addEventListener('mouseenter', function() {
+      placementsMenu.style.display = 'none';
+    });
+
+    function isMouseOverElement(e, element) {
+      const rect = element.getBoundingClientRect();
+      return e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+    }
+  });
+      </script>
+      
+</script>
+</body>
+</html>
