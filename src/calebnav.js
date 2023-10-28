@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdown.classList.toggle('hidden');
     }
 
-    // Toggle dropdowns on click or touchstart
+    // Toggle dropdowns on click and touchstart
     document.querySelectorAll('[data-dropdown-toggle]').forEach(function (toggle) {
         toggle.addEventListener('click', function (event) {
             event.preventDefault(); // Prevent the default link behavior
@@ -13,23 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleDropdown(dropdownId);
         });
 
-        // For mobile devices
         toggle.addEventListener('touchstart', function (event) {
             event.preventDefault(); // Prevent the default link behavior
-            const dropdownId = this.getAttribute('data-dropdown-toggle');
-            toggleDropdown(dropdownId);
-        });
-
-        // For desktop devices
-        toggle.addEventListener('mouseenter', function (event) {
-            event.preventDefault(); // Prevent the default link behavior
-            const dropdownId = this.getAttribute('data-dropdown-toggle');
-            toggleDropdown(dropdownId);
-        });
-
-        // For desktop devices - close dropdown on mouseleave
-        toggle.addEventListener('mouseleave', function (event) {
-            event.preventDefault();
             const dropdownId = this.getAttribute('data-dropdown-toggle');
             toggleDropdown(dropdownId);
         });
