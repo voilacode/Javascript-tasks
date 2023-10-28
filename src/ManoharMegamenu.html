@@ -42,51 +42,50 @@
             <a href="#" class="block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">Home</a>
           </li>
           
-            <li style="list-style-type:  none;" class="flex">
-                <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="items-center justify-between block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">Courses </a>
-                <!-- Dropdown menu -->
-                <div id="dropdownNavbar" class="absolute hidden py-2 pl-3 pr-4 mt-12 text-lg font-semibold text-gray-500 lg:p-0">
-                    <ul class="py-1 text-sm font-bold text-white bg-green-400 rounded-md"  aria-labelledby="dropdownLargeButton">
-                        <div class="grid grid-cols-1 xl:grid-cols-3">
-                                   <div>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
-                                      </li>
-                                      <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
-                                      </li>
-                                      <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 hover:rounded-md hover:text-black">SQL</a>
-                                      </li>
-                                   </div>
-                                   <div>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
-                                      </li>
-                                      <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
-                                      </li>
-                                      <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 hover:rounded-md hover:text-black">SQL</a>
-                                      </li>
-                                   </div>
-                                   <div>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
-                                      </li>
-                                      <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
-                                      </li>
-                                      <li>
-                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 hover:rounded-md hover:text-black">SQL</a>
-                                      </li>
-                                   </div>
+          <li style="list-style-type: none;" class="flex">
+            <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="items-center justify-between block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">Courses</a>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar" class="absolute hidden py-2 pl-3 pr-4 mt-12 text-lg font-semibold text-gray-500 lg:p-0">
+                <ul class="py-1 text-sm font-bold text-white bg-green-400 rounded-md" aria-labelledby="dropdownLargeButton">
+                    <div class="grid grid-cols-3">
+                        <div>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">SQL</a>
+                            </li>
                         </div>
-                     
-                    </ul>
-                   
-                </div>
-            </li>
+                        <div>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">SQL</a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">SQL</a>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </li>
+        
        
       
           <li>
@@ -99,42 +98,37 @@
       </div>
     </div>
   </nav>
-  <script>
-  
+<script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Dropdown functionality
-    function toggleDropdown(dropdownId) {
-        const dropdown = document.getElementById(dropdownId);
-        dropdown.classList.toggle('hidden');
-    }
+    const navbarToggle = document.getElementById('navbarToggle');
+    const navbarSticky = document.getElementById('navbar-sticky');
+    const dropdownNavbarLink = document.getElementById('dropdownNavbarLink');
+    const dropdownNavbar = document.getElementById('dropdownNavbar');
 
-    // Toggle dropdowns on click and touchstart
-    document.querySelectorAll('[data-dropdown-toggle]').forEach(function (toggle) {
-        toggle.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent the default link behavior
-            const dropdownId = this.getAttribute('data-dropdown-toggle');
-            toggleDropdown(dropdownId);
-        });
-
-        toggle.addEventListener('touchstart', function (event) {
-            event.preventDefault(); // Prevent the default link behavior
-            const dropdownId = this.getAttribute('data-dropdown-toggle');
-            toggleDropdown(dropdownId);
-        });
+    // Function to toggle the mobile menu
+    navbarToggle.addEventListener('click', function () {
+      navbarSticky.classList.toggle('hidden');
     });
 
-    // Close dropdowns when clicking or touching outside
-    document.addEventListener('click', closeDropdownsOutside);
-    document.addEventListener('touchstart', closeDropdownsOutside);
+    // Function to toggle the mega menu
+    dropdownNavbarLink.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the link from being followed
+      dropdownNavbar.classList.toggle('hidden');
+    });
 
-    function closeDropdownsOutside(event) {
-        if (!event.target.closest('[data-dropdown-toggle]') && !event.target.closest('.group')) {
-            document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-                dropdown.classList.add('hidden');
-            });
-        }
-    }
-});
+    // Function to close the mega menu when clicking outside of it
+    document.addEventListener('click', function (event) {
+      if (event.target !== dropdownNavbarLink && event.target !== dropdownNavbar) {
+        dropdownNavbar.classList.add('hidden');
+      }
+    });
+
+    // Prevent clicks within the mega menu from closing it
+    dropdownNavbar.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  });
 </script>
+
 </body>
 </html>
