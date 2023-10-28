@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Responsive Navbar with Mega Menu</title>
+  <style>
+    .links a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #0d71bddf;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+    .links a:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+  <nav class="fixed top-0 left-0 z-20 w-full bg-white shadow-lg ">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-3 mx-auto sm:px-16">
+      <a href="./index.html" class="flex items-center text-xl font-bold text-gray-500"> Voilacode </a>
+      <div class="flex lg:order-2">
+        <a  class="px-2 py-2 mr-3 font-medium text-center text-white bg-green-400 rounded-lg cursor-pointer focus:ring-4 focus:outline-none text-md hover:outline-1 sm:px-4 lg:py-2 lg:mr-0 hover:scale-x-100" >Login</a>
+        <a  class="px-2 py-2 mr-3 font-medium text-center text-white bg-green-400 rounded-lg cursor-pointer focus:ring-4 focus:outline-none text-md hover:outline-1 sm:px-4 lg:py-2 lg:ml-2" >Regsister</a>
+
+        <button id="navbarToggle" type="button" class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm bg-gray-100 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 mt-4 font-medium rounded-lg links lg:p-0 lg:text-md lg:flex-row lg:space-x-6 lg:mt-0 lg:border-0 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">Home</a>
+          </li>
+          
+            <li style="list-style-type:  none;" class="flex">
+                <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="items-center justify-between block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">Courses </a>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar" class="absolute hidden py-2 pl-3 pr-4 mt-12 text-lg font-semibold text-gray-500 lg:p-0">
+                    <ul class="py-1 text-sm font-bold text-white bg-green-400 rounded-md" aria-labelledby="dropdownLargeButton ">
+                        <div class="grid grid-cols-1 xl:grid-cols-3">
+                                   <div>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 hover:rounded-md hover:text-black">SQL</a>
+                                      </li>
+                                   </div>
+                                   <div>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 hover:rounded-md hover:text-black">SQL</a>
+                                      </li>
+                                   </div>
+                                   <div>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">JAVA</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 dark:hover:text-black hover:rounded-md hover:text-black">HTML-CSS</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="block px-4 py-2 m-2 hover:bg-gray-100 hover:rounded-md hover:text-black">SQL</a>
+                                      </li>
+                                   </div>
+                        </div>
+                     
+                    </ul>
+                   
+                </div>
+            </li>
+       
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">About</a>
+          </li>
+          <li class="pr-10">
+            <a href="#" class="block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">Services</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.getElementById('navbarToggle').addEventListener('click', function () {
+      document.getElementById('navbar-sticky').classList.toggle('hidden');
+    });
+  document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.getElementById('navbar-dropdown');
+  
+    const dropdownButton = document.getElementById('dropdownNavbarLink');
+    const dropdownMenu = document.getElementById('dropdownNavbar');
+  
+    dropdownButton.addEventListener('click', () => {
+      dropdownMenu.classList.remove('hidden');
+    });
+  });
+</script>
+</body>
+</html>
