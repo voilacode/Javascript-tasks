@@ -8,6 +8,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <title>Tailwind CSS Mega Menu</title>
+  <style>
+    @media (max-width: 340px){
+      .sign{
+        display: none!important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -252,7 +259,7 @@
             <nav>
               <ul>
                 <li class="flex items-center gap-2">
-                  <a href="#" class="hidden sm:flex items-center px-3 py-2 font-semibold bg-white rounded-full bg-opacity-10 group ">
+                  <a href="#" class="flex items-center px-3 py-2 font-semibold bg-white rounded-full bg-opacity-10 group sign">
                     <span class="mr-2">Sign in</span>
                     <svg class="stroke-current" width="10" height="10" stroke-width="2" viewBox="0 0 10 10" aria-hidden="true">
                       <g fill-rule="evenodd">
