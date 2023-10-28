@@ -46,7 +46,7 @@
                 <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="items-center justify-between block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">Courses </a>
                 <!-- Dropdown menu -->
                 <div id="dropdownNavbar" class="absolute hidden py-2 pl-3 pr-4 mt-12 text-lg font-semibold text-gray-500 lg:p-0">
-                    <ul class="py-1 text-sm font-bold text-white bg-green-400 rounded-md" aria-labelledby="dropdownLargeButton ">
+                    <ul class="py-1 text-sm font-bold text-white bg-green-400 rounded-md"  aria-labelledby="dropdownLargeButton">
                         <div class="grid grid-cols-1 xl:grid-cols-3">
                                    <div>
                                     <li>
@@ -88,7 +88,7 @@
                 </div>
             </li>
        
-          </li>
+      
           <li>
             <a href="#" class="block py-2 pl-3 pr-4 mt-2 text-lg font-semibold text-gray-500 lg:p-0">About</a>
           </li>
@@ -104,14 +104,12 @@
       document.getElementById('navbar-sticky').classList.toggle('hidden');
     });
   document.addEventListener('DOMContentLoaded', function () {
-    const menu = document.getElementById('navbar-dropdown');
-  
     const dropdownButton = document.getElementById('dropdownNavbarLink');
     const dropdownMenu = document.getElementById('dropdownNavbar');
-  
     dropdownButton.addEventListener('click', () => {
       dropdownMenu.classList.remove('hidden');
     });
+ 
   });
 </script>
 </body>
