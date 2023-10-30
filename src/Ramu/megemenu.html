@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>megemenu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="p-4 bg-gray-800">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between w-[92%]">
+            <div class="flex items-center justify-between">
+                <a href="#" class="mb-4 text-xl font-bold text-white md:mb-0">
+                    <img src="../assets/voilacode-white-logo.png" class="h-6 md:h-10 rounde-lg" alt="">
+                </a>
+                <div class="flex items-center lg:hidden ">
+                    <button id="menuToggle" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="items-center hidden space-x-4 lg:flex">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-gray-300 hover:text-white">Home</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">About</a></li>
+                    <li class=" group" id="servicesDropdown">
+                        <button  class="relative text-gray-300 hover:text-white focus:outline-none">Services</button>
+                        <div class="absolute z-10 hidden py-2 mt-4 bg-gray-200 divide-y divide-gray-700 rounded">
+                            <div class="grid grid-cols-3 gap-4">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    1</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    2</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    3</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    4</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    5</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    6</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    7</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    8</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                    9</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class=" group" id="productsDropdown">
+                        <button class="relative text-gray-300 hover:text-white focus:outline-none">Products</button>
+                        <div class="absolute z-10 hidden py-2 mt-4 bg-gray-200 divide-y divide-gray-700 rounded">
+                            <div class="grid grid-cols-3 gap-4">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    1</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    2</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    3</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    4</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    5</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    6</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    7</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    8</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                    9</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Contacts</a></li>
+                </ul>
+                <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">Login</button>
+                <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700">Register</button>
+            </div>
+        </div>
+        <div class="hidden w-full pl-6" id="mobileMenu">
+            <ul class="flex flex-col items-start pl-10 mt-4 md:space-y-4">
+                <li><a href="#" class="block text-lg text-gray-300 hover:bg-gray-200 hover:text-black">Home</a></li>
+                <li><a href="#" class="text-gray-300 hover:bg-gray-200 hover:text-black">About</a></li>
+                <li class=" group" id="servicesDropdownMobile">
+                    <button class="relative text-lg text-gray-300 focus:outline-none hover:bg-gray-200 hover:text-black">Services</button>
+                    <div class="absolute z-10 hidden py-2 mt-2 ml-10 bg-gray-200 divide-y divide-gray-700">
+                        <div class="grid grid-cols-3 gap-4">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                1</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                2</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                3</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                4</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                5</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                6</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                7</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                8</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Service
+                                9</a>
+                        </div>
+                    </div>
+                </li>
+                <li class=" group" id="productsDropdownMobile">
+                    <button class="relative text-lg text-gray-300 focus:outline-none hover:bg-gray-200 hover:text-black">Products</button>
+                    <div class="absolute z-10 hidden py-2 mt-2 ml-10 bg-gray-200 divide-y divide-gray-700">
+                        <div class="grid grid-cols-3 gap-4">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                1</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                2</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                3</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                4</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                5</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                6</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                7</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                8</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-semibold text-black hover:text-red-800">Product
+                                9</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" class="text-gray-300 hover:bg-gray-200 hover:text-black">Contacts</a></li>
+                <li><button class="px-4 py-2 text-lg font-bold text-white bg-blue-500 rounded hover:bg-blue-700">Login</button>
+                </li>
+                <li><button
+                        class="px-4 py-2 text-lg font-bold text-white bg-green-500 rounded hover:bg-green-700">Register</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Your content goes here -->
+
+    <script>
+        class Dropdown {
+    constructor(id) {
+        this.dropdown = document.getElementById(id);
+        this.dropdownContent = this.dropdown.querySelector('div');
+        this.dropdownTimeout = null;
+        this.dropdown.addEventListener('mouseenter', this.show.bind(this));
+        this.dropdown.addEventListener('mouseleave', this.hide.bind(this));
+        this.dropdown.addEventListener('click', this.toggle.bind(this));
+        this.dropdownContent.addEventListener('mouseenter', this.cancelHide.bind(this));
+        this.dropdownContent.addEventListener('mouseleave', this.hide.bind(this));
+    }
+
+    show() {
+        this.dropdownContent.classList.remove('hidden');
+    }
+
+    hide() {
+        this.dropdownTimeout = setTimeout(() => {
+            this.dropdownContent.classList.add('hidden');
+        }, 300); // Adjust the delay time as needed
+    }
+
+    cancelHide() {
+        if (this.dropdownTimeout) {
+            clearTimeout(this.dropdownTimeout);
+        }
+    }
+
+    toggle() {
+        this.dropdownContent.classList.toggle('hidden');
+    }
+}
+
+const servicesDropdown = new Dropdown('servicesDropdown');
+const productsDropdown = new Dropdown('productsDropdown');
+const servicesDropdownMobile = new Dropdown('servicesDropdownMobile');
+const productsDropdownMobile = new Dropdown('productsDropdownMobile');
+
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuToggle.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+});
+
+       
+
+    </script>
+
+</body>
+
+</html>
