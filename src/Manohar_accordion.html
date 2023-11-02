@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="p-4">
+
+        <div class="max-w-xl mx-auto">
+            <h1 class="text-5xl font-bold pb-4">Accordion</h1>
+
+            <div class="bg-white  rounded-lg">
+                <!-- Accordion Item 1 -->
+                <div class="border-b mb-4 shadow-lg border border-black rounded-lg hover:bg-blue-400">
+                    <button class="w-full text-left p-4 focus:outline-none  text-gray-800  rounded-md hover:bg-blue-400 hover:text-white hover:font-semibold">
+What is HTML?                  </button>
+                    <div class="hidden p-4 bg-blue-100 rounded-lg   text-sm text-gray-800">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta corrupti itaque nulla animi! Consequuntur nostrum id quidem recusandae totam, reiciendis ut odio ea aliquam vitae necessitatibus ad voluptate veritatis? Tenetur!                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4 ">
+                    <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
+                        What is python ?
+                    </button>
+                    <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
+                    </div>
+                </div>
+                <!-- Accordion Item 3 -->
+                <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4 ">
+                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
+                      what is Ruby ?
+                  </button>
+                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
+                  </div>
+              </div>
+               <!-- Accordion Item 4 -->
+                <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4">
+                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
+What is java                  </button> 
+                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
+                  </div>
+              </div>
+                <!-- Accordion Item 5 -->
+                <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4">
+                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
+                     What is css ?
+                  </button>
+                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
+                  </div>
+              </div>
+                 <!-- Accordion Item 5 -->
+                 <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4 ">
+                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
+                      what is pascal ?
+                  </button>
+                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
+                  </div>
+              </div>
+                 <!-- Accordion Item 6 -->
+                 <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4">
+                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
+                      what is cobal ?
+                  </button>
+                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.bg-white button');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
