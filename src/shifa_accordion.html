@@ -6,23 +6,6 @@
     <link rel="stylesheet" href="../dist/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Accordion</title>
-    <style>
-        .item .activeIcon{
-            @apply hidden!important;
-        }
-        .item.active .inactiveIcon{
-            @apply hidden!important;
-        }
-        .item.active .activeIcon{
-            @apply block!important;
-        }
-        .item:not(.active) .content{
-            @apply h-0 p-0 overflow-hidden!important;
-        }
-        .item.active .content{
-            @apply p-4 md:p-8 h-fit!important;
-        }
-    </style>
 </head>
 <body class="flex items-center justify-center h-screen text-white bg-slate-500">
 

@@ -3,3 +3,18 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+.item .activeIcon{
+    @apply hidden;
+}
+.item.active .inactiveIcon{
+    @apply hidden;
+}
+.item.active .activeIcon{
+    @apply block;
+}
+.item:not(.active) .content{
+    @apply h-0 p-0 overflow-hidden;
+}
+.item.active .content{
+    @apply p-4 md:p-8 h-fit;
+}
