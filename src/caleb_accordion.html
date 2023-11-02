@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>VoilaCode</title>
+</head>
+<body>
+
+<section class="px-4 sm:px-16 py-4" >  
+<div id="accordion-nested-parent" data-accordion="collapse">
+    <h2 id="accordion-collapse-heading-1">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+          <span class="flex items-center"> What is Voils UI <svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg></span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">Voils UI is a versatile, open-source collection of interactive components designed to enhance web development using the power of Tailwind CSS. Our library includes a wide range of components such as buttons, dropdowns, modals, navigation bars, and more, all meticulously crafted to streamline your web design process.</p>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">For an in-depth guide on how to get started with Voils UI and accelerate your website development, please refer to our <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">Getting Started documentation</a>.</p>
+          <p class="mb-4 text-gray-500 dark:text-gray-400">What sets Voils UI apart from Tailwind UI?</p>
+          <!-- Nested accordion -->
+          <div id="accordion-nested-collapse" data-accordion="collapse">
+            <h2 id="accordion-nested-collapse-heading-1">
+              <button type="button" class="flex items-center justify-between w-full p-5 rounded-t-xl font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 " data-accordion-target="#accordion-nested-collapse-body-1" aria-expanded="false" aria-controls="accordion-nested-collapse-body-1">
+                <span>Open Source</span>
+                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+              </button>
+            </h2>
+            <div id="accordion-nested-collapse-body-1" class="hidden" aria-labelledby="accordion-nested-collapse-heading-1">
+              <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                <p class="text-gray-500 dark:text-gray-400">The primary distinction is that Voils UI's core components are open source under the MIT license, whereas Tailwind UI is a paid product.</p>
+              </div>
+            </div>
+            <h2 id="accordion-nested-collapse-heading-2">
+              <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 " data-accordion-target="#accordion-nested-collapse-body-2" aria-expanded="false" aria-controls="accordion-nested-collapse-body-2">
+                <span>Architecture</span>
+                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+              </button>
+            </h2>
+            <div id="accordion-nested-collapse-body-2" class="hidden" aria-labelledby="accordion-nested-collapse-heading-2">
+              <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                <p class="text-gray-500 dark:text-gray-400">Another key difference is that Voils UI emphasizes smaller, standalone components, while Tailwind UI offers pre-designed sections of complete web pages.</p>
+              </div>
+            </div>
+            <h2 id="accordion-nested-collapse-heading-3">
+              <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100" data-accordion-target="#accordion-nested-collapse-body-3" aria-expanded="false" aria-controls="accordion-nested-collapse-body-3">
+                <span>Can I use both?</span>
+                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+              </button>
+            </h2>
+            <div id="accordion-nested-collapse-body-3" class="hidden" aria-labelledby="accordion-nested-collapse-heading-3">
+              <div class="p-5 border border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">We actually recommend using both Voils UI, Voils UI Pro, and even Tailwind UI, as there are no technical reasons preventing you from enjoying the benefits of both libraries simultaneously.</p>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">To explore these technologies further, you can check out the following resources:</p>
+                <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+                  <li><a href="https://voils.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Voils UI Pro</a></li>
+                  <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <h2 id="accordion-collapse-heading-2">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover-bg-gray-100" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+          <span class="flex items-center"> Is there a Figma file available <svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg></span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+    </h2>
+    <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+        <div class="p-5 border border-gray-200 dark:border-gray-700">
+          <p class="mb-2 text-gray-500 dark-text-gray-400">Voils UI is first conceived and designed using Figma software, ensuring that every element in our library has an equivalent design representation within our Figma project.</p>
+          <p class="text-gray-500 dark-text-gray-400">To explore our design system based on Tailwind CSS utility classes and Flowbite components, please visit our <a href="https://voila.com/figma/" class="text-blue-600 dark-text-blue-500 hover:underline">Figma Design System</a>.</p>
+        </div>
+    </div>
+  
+    <h2 id="accordion-collapse-heading-3">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 " data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+          <span class="flex items-center"> What Services Does VoilaUI Offer <svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg></span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+    </h2>
+    <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+      <div class="p-5 border border-gray-200 dark:border-gray-700">
+        <p class="mb-2 text-gray-500 dark-text-gray-400">VoilaUI provides a range of services, including Web Development and Mobile Development. Our team of experts is dedicated to crafting high-quality web and mobile solutions tailored to your specific needs. Whether you require a stunning website, a robust web application, or a user-friendly mobile app, VoilaUI has the expertise to bring your ideas to life.</p>
+        <p class="text-gray-500 dark:text-gray-400">For more details about our services and how we can assist you, feel free to reach out to us.</p>
+      </div>
+    </div>
+
+
+    <h2 id="accordion-collapse-heading-4">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 " data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+          <span class="flex items-center"> What Products Does VoilaUI Offer <svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg></span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+    </h2>
+    <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+      <div class="p-5 border border-gray-200 dark:border-gray-700">
+        <p class="mb-2 text-gray-500 dark-text-gray-400">VoilaUI offers a variety of innovative products, including the Learning App, Community App, Recruitment App, and more. These products are designed to streamline various aspects of your business and provide exceptional solutions for your organization's needs.</p>
+        <p class="text-gray-500 dark:text-gray-400">To explore each product and understand how they can benefit your business, please don't hesitate to get in touch with us. We'll be happy to provide you with detailed information about our products.</p>
+      </div>
+    </div>
+
+</div>
+
+</section>
+  
+
+
+
+<script>
+  const mainAccordions = document.querySelectorAll('[data-accordion="collapse"]');
+
+  mainAccordions.forEach((mainAccordion) => {
+      const mainHeadings = mainAccordion.querySelectorAll('h2');
+
+      mainHeadings.forEach((mainHeading) => {
+          mainHeading.addEventListener('click', () => {
+              const mainTargetId = mainHeading.querySelector('button').getAttribute('data-accordion-target');
+              const mainTarget = document.querySelector(mainTargetId);
+              const isMainOpen = mainTarget.getAttribute('aria-expanded') === 'true';
+
+              // Close all main accordions
+              mainAccordions.forEach((accordion) => {
+                  const targets = accordion.querySelectorAll('[id^="accordion-collapse-body-"]');
+                  targets.forEach((target) => {
+                      target.style.display = 'none';
+                      target.setAttribute('aria-expanded', 'false');
+                  });
+              });
+
+              mainTarget.style.display = isMainOpen ? 'none' : 'block';
+              mainTarget.setAttribute('aria-expanded', !isMainOpen);
+          });
+
+          const nestedAccordions = mainAccordion.querySelectorAll('[data-accordion="collapse"]');
+
+          nestedAccordions.forEach((nestedAccordion) => {
+              const nestedHeadings = nestedAccordion.querySelectorAll('h2');
+
+              nestedHeadings.forEach((nestedHeading) => {
+                  nestedHeading.addEventListener('click', () => {
+                      const nestedTargetId = nestedHeading.querySelector('button').getAttribute('data-accordion-target');
+                      const nestedTarget = document.querySelector(nestedTargetId);
+                      const isNestedOpen = nestedTarget.getAttribute('aria-expanded') === 'true';
+
+                      // Close all nested accordions within this main accordion
+                      nestedAccordions.forEach((accordion) => {
+                          if (accordion !== nestedAccordion) {
+                              const targets = accordion.querySelectorAll('[id^="accordion-nested-collapse-body-"]');
+                              targets.forEach((target) => {
+                                  target.style.display = 'none';
+                                  target.setAttribute('aria-expanded', 'false');
+                              });
+                          }
+                      });
+
+                      nestedTarget.style.display = isNestedOpen ? 'none' : 'block';
+                      nestedTarget.setAttribute('aria-expanded', !isNestedOpen);
+                  });
+              });
+          });
+      });
+  });
+</script>
+
+
+
+</body>
+
+</html>
