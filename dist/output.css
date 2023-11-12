@@ -868,6 +868,11 @@ video {
   margin-top: 2rem;
 }
 
+.ms-auto {
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+}
+
 .block {
   display: block;
 }
@@ -1188,6 +1193,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-normal {
+  justify-content: normal;
 }
 
 .justify-end {
@@ -1596,6 +1605,11 @@ video {
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.bg-orange-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-10 {
