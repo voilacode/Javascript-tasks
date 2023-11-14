@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tailwind CSS Card</title>
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gray-100 ">
+    <img src="../assets/clickme" alt="clickme" class="relative cursor-pointer" onclick="openModel()">
+    <div class="absolute hidden w-full max-w-md p-6 bg-white rounded-md shadow-md " id="model">
+        <p class="mb-4 text-gray-700">
+            A JavaScript model component is a self-contained unit encapsulating data and logic for specific functionality within a web application.
+        </p>
+        <button class="px-4 py-2 text-white bg-blue-500 rounded-md focus:outline-none" id="btn" onclick="closeModel()">
+            Close
+        </button>
+    </div>
+    <script>
+        let model = document.getElementById("model");
+        let btn = document.getElementById("btn");
+
+        function openModel() {
+            model.style.display = 'block';
+        }
+
+        function closeModel() {
+            model.style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>
