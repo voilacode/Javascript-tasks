@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Modal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <style>
+        /* Additional styles specific to modal2 and modal3 */
+        #modal2,
+        #modal3 {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 flex items-center justify-center h-screen ">
+    <button id="openModal2" class="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded shadow-xl ">
+        Open Modal 2
+    </button>
+
+    <button id="openModal3" class="bg-purple-500 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded mx-4 ">
+        Open Modal 3
+    </button>
+
+    <div id="modal2" class="fixed inset-0 z-50 bottom-80 flex items-center justify-center mx-auto overflow-x-hidden overflow-y-auto w-1/2 ">
+        <div class="relative bg-blue-500 hover:bg-red-300 duration-500 cursor-pointer  p-4 text-white w-full mx-10 rounded shadow-lg">
+            <button id="closeModal2" class="absolute top-0 right-0 m-3 text-white hover:text-gray-700">
+                &times;
+            </button>
+            <h2 class="text-2xl font-bold py-2">Special Offer</h2>
+            <p class="py-2">Unlock a special discount on our premium membership! For a limited time, sign up for an annual subscription and get 30% off.</p>
+            <ul class="list-disc pl-4">
+                <li>Access exclusive content</li>
+                <li>Priority customer support</li>
+                <li>Early access to new features</li>
+            </ul>
+            <button id="closeModal2" class="bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded">
+                Close
+            </button>
+        </div>
+    </div>
+    
+    <div id="modal3" class="fixed inset-0 z-50 bottom-80 flex items-center justify-center mx-auto overflow-x-hidden overflow-y-auto w-1/2">
+        <div class="relative p-4 bg-purple-400 hover:bg-white duration-700 cursor-pointer hover:text-black text-white w-full mx-10 rounded shadow-lg">
+            <button id="closeModal3" class="absolute top-0 right-0 m-3 text-gray-700 hover:text-gray-700">
+                &times;
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Product Launch Event</h2>
+            <p class="py-2">Join us for the grand launch of our latest product! Experience live demos, expert talks, and a chance to win exclusive giveaways.</p>
+            <ul class="list-disc pl-4 py-2">
+                <li>Interactive product demonstrations</li>
+                <li>Insights from industry experts</li>
+                <li>Exciting product bundles for early adopters</li>
+            </ul>
+            <button id="closeModal3" class="bg-purple-500 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded">
+                Close
+            </button>
+        </div>
+    </div>
+    
+    </div>
+
+    <script>
+        const openModalButton2 = document.getElementById('openModal2');
+        const openModalButton3 = document.getElementById('openModal3');
+        const closeModalButton2 = document.getElementById('closeModal2');
+        const closeModalButton3 = document.getElementById('closeModal3');
+        const modal2 = document.getElementById('modal2');
+        const modal3 = document.getElementById('modal3');
+
+        openModalButton2.addEventListener('click', () => {
+            modal2.style.display = 'flex';
+        });
+
+        openModalButton3.addEventListener('click', () => {
+            modal3.style.display = 'flex';
+        });
+
+        closeModalButton2.addEventListener('click', () => {
+            modal2.style.display = 'none';
+        });
+
+        closeModalButton3.addEventListener('click', () => {
+            modal3.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
