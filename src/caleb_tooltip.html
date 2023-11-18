@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>VoilaCode</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional custom styles */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex space-x-4">
+    <!-- Left Tooltip -->
+    <div class="relative inline-block">
+        <button class="bg-blue-500 text-white px-5 py-2 rounded">Left_Representation</button>
+        <div class="hidden absolute bg-gray-800 text-white p-2 rounded-md text-sm left-0 -ml-20">Left Tooltip</div>
+    </div>
+
+    <!-- Top Tooltip -->
+    <div class="relative inline-block">
+        <button class="bg-blue-500 text-white px-5 py-2 rounded">Top_Representation</button>
+        <div class="hidden absolute bg-gray-800 text-white p-2 rounded-md text-sm top-0 -mt-9">Top Tooltip</div>
+    </div>
+
+    <!-- Bottom Tooltip -->
+    <div class="relative inline-block">
+        <button class="bg-blue-500 text-white px-5 py-2 rounded md:col-span-2">Bottom_Representation</button>
+        <div class="hidden absolute bg-gray-800 text-white p-2 rounded-md text-sm bottom-0 -mb-9">Bottom Tooltip</div>
+    </div>
+
+    <!-- Right Tooltip -->
+    <div class="relative inline-block">
+        <button class="bg-blue-500 text-white px-5 py-2 rounded md: col-span-2">Right_Representation</button>
+        <div class="hidden absolute bg-gray-800 text-white p-2 rounded-md text-sm right-0 -mr-20">Right Tooltip</div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('button');
+
+        buttons.forEach(button => {
+            const tooltip = button.nextElementSibling;
+
+            button.addEventListener('mouseover', function () {
+                tooltip.classList.remove('hidden');
+            });
+
+            button.addEventListener('mouseout', function () {
+                tooltip.classList.add('hidden');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
