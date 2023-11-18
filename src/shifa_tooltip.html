@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.3"></script>
+    <title>Tooltip</title>
+</head>
+
+<body>
+    <section class="sm:flex justify-center align-center transform translate-y-64 space-x-8">
+       
+        <div class="relative">
+          <button id="left-tooltip" class="bg-orange-500 rounded shadow px-4 py-2 text-white duration-300 hover:bg-orange-600">Left Tooltip</button>
+          <div id="left-tooltip-content" class="hidden bg-gray-800 text-white text-xs p-2 absolute   right-full transform -translate-y-9 mr-2 rounded z-50 pointer-events-none w-28 text-center duration-300 ease-in-out">Left Tooltip </div>
+      </div>
+        <div class="relative">
+            <button id="bottom-tooltip" class="bg-emerald-500 rounded shadow px-4 py-2 text-white duration-300 hover:bg-emerald-600">Top Tooltip</button>
+            <div id="bottom-tooltip-content" class="hidden bg-gray-800 text-white text-xs p-2 absolute bottom-full left-1/2 transform -translate-x-1/2 mt-2 rounded z-50 pointer-events-none w-28 text-center duration-300 ease-in-out">Top Tooltip </div>
+        </div>
+        
+        <div class="relative">
+            <button id="top-tooltip" class="bg-rose-500 rounded shadow px-4 py-2 text-white duration-300 hover:bg-rose-600">Bottom Tooltip</button>
+            <div id="top-tooltip-content" class="hidden bg-gray-800 text-white text-xs p-2 absolute top-full left-1/2 transform -translate-x-1/2 -mt-2 rounded z-50 pointer-events-none w-28 text-center duration-300 ease-in-out">Bottom Tooltip </div>
+        </div>
+
+        <div class="relative">
+            <button id="right-tooltip" class="bg-cyan-600 rounded shadow px-4 py-2 text-white duration-300 hover:bg-cyan-700">Right Tooltip</button>
+            <div id="right-tooltip-content" class="hidden bg-gray-800 text-white text-xs p-2 absolute top-1/2 left-full transform -translate-y-1/2 -ml-2 rounded z-50 pointer-events-none w-28 text-center duration-300 ease-in-out">Right Tooltip </div>
+        </div>
+         
+    </section> 
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          function showTooltip(id) {
+            document.getElementById(`${id}-content`).classList.remove('hidden');
+          }
+      
+          function hideTooltip(id) {
+            document.getElementById(`${id}-content`).classList.add('hidden');
+          }
+      
+          document.getElementById('top-tooltip').addEventListener('mouseenter', () => showTooltip('top-tooltip'));
+          document.getElementById('top-tooltip').addEventListener('mouseleave', () => hideTooltip('top-tooltip'));
+      
+          document.getElementById('right-tooltip').addEventListener('mouseenter', () => showTooltip('right-tooltip'));
+          document.getElementById('right-tooltip').addEventListener('mouseleave', () => hideTooltip('right-tooltip'));
+      
+          document.getElementById('bottom-tooltip').addEventListener('mouseenter', () => showTooltip('bottom-tooltip'));
+          document.getElementById('bottom-tooltip').addEventListener('mouseleave', () => hideTooltip('bottom-tooltip'));
+      
+          document.getElementById('left-tooltip').addEventListener('mouseenter', () => showTooltip('left-tooltip'));
+          document.getElementById('left-tooltip').addEventListener('mouseleave', () => hideTooltip('left-tooltip'));
+        });
+      </script>
+      
+
+</body>
+
+</html>
