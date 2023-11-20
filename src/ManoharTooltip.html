@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tooltip Example</title>
+</head>
+<body>
+    <!-- Your content goes here -->
+    <button id="tooltip-trigger" class="p-4 bg-blue-500 text-white m-10">Hover me</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tooltipTrigger = document.getElementById("tooltip-trigger");
+    
+            // Function to show the tooltip
+            const showTooltip = () => {
+                const tooltip = document.createElement("div");
+                tooltip.className = "absolute bg-gray-800 text-white p-2 rounded-md";
+                tooltip.textContent = "HI i am manohar";
+    
+                // Position the tooltip relative to the trigger element
+                const rect = tooltipTrigger.getBoundingClientRect();
+                tooltip.style.top = rect.bottom + "px";
+                tooltip.style.left = rect.left + "px";
+    
+                document.body.appendChild(tooltip);
+    
+                // Remove the tooltip after a delay
+                setTimeout(() => {
+                    tooltip.remove();
+                }, 1000);
+            };
+    
+            // Event listeners to show and hide the tooltip
+            tooltipTrigger.addEventListener("mouseenter", showTooltip);
+            tooltipTrigger.addEventListener("mouseleave", () => {
+                const tooltip = document.querySelector(".tooltip");
+                if (tooltip) {
+                    tooltip.remove();
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

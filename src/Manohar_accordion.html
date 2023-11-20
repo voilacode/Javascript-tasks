@@ -1,95 +1,100 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Accordion Example</title>
+    <style>
+
+.accordion-item {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.accordion-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin:5px;
+}
+
+.accordion-content {
+    display: none;
+   padding: 1rem;
+}
+
+.accordion-item.open .accordion-content {
+    display: block;
+}
+
+    </style>
 </head>
-<body>
-    <div class="p-4">
+<h1 class="text-black text-5xl m-5 ">
+    Accordion
 
-        <div class="max-w-xl mx-auto">
-            <h1 class="text-5xl font-bold pb-4">Accordion</h1>
-
-            <div class="bg-white  rounded-lg">
-                <!-- Accordion Item 1 -->
-                <div class="border-b mb-4 shadow-lg border border-black rounded-lg hover:bg-blue-400">
-                    <button class="w-full text-left p-4 focus:outline-none  text-gray-800  rounded-md hover:bg-blue-400 hover:text-white hover:font-semibold">
-What is HTML?                  </button>
-                    <div class="hidden p-4 bg-blue-100 rounded-lg   text-sm text-gray-800">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta corrupti itaque nulla animi! Consequuntur nostrum id quidem recusandae totam, reiciendis ut odio ea aliquam vitae necessitatibus ad voluptate veritatis? Tenetur!                    </div>
-                </div>
-
-                <!-- Accordion Item 2 -->
-                <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4 ">
-                    <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
-                        What is python ?
+</h1>
+<body class="bg-gray-200 m-8">
+    <div class=" mx-auto">
+        <div class="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button   text-white font-bold bg-green-300 rounded-lg hover:bg-blue-500">
+                        Section 1
                     </button>
-                    <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
-                    </div>
+                </h2>
+                <div class="accordion-content p-4 bg-blue-100 rounded-lg text-sm text-gray-800 hover:bg-blue-500">
+                    <p>
+                        This is section 1
+                    </p>
                 </div>
-                <!-- Accordion Item 3 -->
-                <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4 ">
-                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
-                      what is Ruby ?
-                  </button>
-                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
-                  </div>
-              </div>
-               <!-- Accordion Item 4 -->
-                <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4">
-                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
-What is java                  </button> 
-                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
-                  </div>
-              </div>
-                <!-- Accordion Item 5 -->
-                <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4">
-                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
-                     What is css ?
-                  </button>
-                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
-                  </div>
-              </div>
-                 <!-- Accordion Item 5 -->
-                 <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4 ">
-                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
-                      what is pascal ?
-                  </button>
-                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
-                  </div>
-              </div>
-                 <!-- Accordion Item 6 -->
-                 <div class="border-b  border border-black rounded-lg hover:bg-blue-400 shadow-lg mb-4">
-                  <button class="w-full text-left p-4 focus:outline-none hover:bg-blue-400 hover:text-white rounded-md text-gray-800">
-                      what is cobal ?
-                  </button>
-                  <div class="hidden p-4 bg-blue-100 rounded-lg text-sm text-gray-800">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, praesentium sunt! Dolores, maiores labore veniam libero hic distinctio ipsum odio amet, reprehenderit quod illum, eveniet exercitationem rerum illo? Porro, voluptates?
-                  </div>
-              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button font-bold hover:bg-blue-500 text-white   bg-green-300 rounded-lg"">
+                        Section 2
+                    </button>
+                </h2>
+                <div class="accordion-content bg-blue-200 rounded-lg">
+                    <p>
+                        This is section 2
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button font-bold hover:bg-blue-500 text-white   bg-green-300 rounded-lg"">
+                        Section 3
+                    </button>
+                </h2>
+                <div class="accordion-content bg-blue-200 rounded-lg">
+                    <p>
+This is section 3                    </p>
+                </div>
             </div>
         </div>
     </div>
-
-    <script>
-        const buttons = document.querySelectorAll('.bg-white button');
+    <script >
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
         
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                content.classList.toggle('hidden');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordionItem = header.parentNode;
+                    const isExpanded = accordionItem.classList.contains('open');
+        
+                    // Close all accordion items
+                    accordionHeaders.forEach(item => item.parentNode.classList.remove('open'));
+        
+                    // Toggle the current accordion item
+                    accordionItem.classList.toggle('open', !isExpanded);
+                });
             });
         });
+        
     </script>
 </body>
 </html>
-
-
-
-
-
