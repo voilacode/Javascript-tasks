@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltip Example with Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="p-4 bg-gray-200">
+
+  <div class="flex items-center justify-center h-screen">
+    <div class="relative inline-block mx-4 my-4" data-tooltip-placement="top">
+      <span class="p-2 text-white bg-blue-500 rounded focus:outline-none hover:shadow-md">Top</span>
+      <div class="absolute z-10 invisible w-32 p-2 text-center text-white transition-opacity duration-300 bg-gray-800 rounded opacity-0">
+        Top Tooltip
+      </div>
+    </div>
+
+    <div class="relative inline-block mx-4 my-4" data-tooltip-placement="right">
+      <span class="p-2 text-white bg-blue-500 rounded focus:outline-none hover:shadow-md">Right</span>
+      <div class="absolute z-10 invisible w-32 p-2 text-center text-white transition-opacity duration-300 bg-gray-800 rounded opacity-0">
+        Right Tooltip
+      </div>
+    </div>
+
+    <div class="relative inline-block mx-4 my-4" data-tooltip-placement="bottom">
+      <span class="p-2 text-white bg-blue-500 rounded focus:outline-none hover:shadow-md">Bottom</span>
+      <div class="absolute z-10 invisible w-32 p-2 text-center text-white transition-opacity duration-300 bg-gray-800 rounded opacity-0">
+        Bottom Tooltip
+      </div>
+    </div>
+
+    <div class="relative inline-block mx-4 my-4" data-tooltip-placement="left">
+      <span class="p-2 text-white bg-blue-500 rounded focus:outline-none hover:shadow-md">Left</span>
+      <div class="absolute z-10 invisible w-32 p-2 text-center text-white transition-opacity duration-300 bg-gray-800 rounded opacity-0">
+        Left Tooltip
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tooltips = document.querySelectorAll('.relative');
+
+    tooltips.forEach(tooltip => {
+      tooltip.addEventListener('mouseenter', () => {
+        const tooltipText = tooltip.querySelector('.invisible');
+        tooltipText.classList.remove('invisible');
+        tooltipText.classList.add('visible', 'opacity-100');
+      });
+
+      tooltip.addEventListener('mouseleave', () => {
+        const tooltipText = tooltip.querySelector('.visible');
+        tooltipText.classList.remove('visible', 'opacity-100');
+        tooltipText.classList.add('invisible');
+      });
+    });
+  </script>
+
+</body>
+</html>
