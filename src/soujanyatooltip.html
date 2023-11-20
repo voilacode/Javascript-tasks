@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooltip Example</title>
+<!-- Include Tailwind CSS -->
+<link href="../dist/output.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css"  rel="stylesheet" />
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="relative">
+    <button id="tooltipBtn" class="bg-gradient-to-l from-cyan-700 via-cyan-400 to-cyan-700 hover:bg-cyan-900 text-white font-bold py-2 px-4 rounded">
+      Hover me for tooltip
+    </button>
+    <div id="tooltip" class="hidden bg-black text-white text-xs rounded py-2 px-5 w-28 absolute z-10 bottom-6 left-1/2 transform -translate-x-1/2 mb-6">
+      Tooltip Text
+      <svg class="absolute text-black h-2 w-full left-0 top-full" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0"/></svg>
+    </div>
+  </div>
+  <div class="relative ml-4">
+    <button id="bottomTooltipBtn" class="bg-gradient-to-l from-cyan-700 via-cyan-400 to-cyan-700 hover:bg-cyan-900 text-white font-bold py-2 px-4 rounded">
+      Hover me for tooltip
+    </button>
+    
+    <div id="bottomTooltip" class="hidden bg-black text-white text-xs rounded py-2 px-5 w-28 absolute z-10 top-full left-1/2 transform -translate-x-1/2 mt-2">
+      <div class="flex">
+        
+        Tooltip Text
+      
+      
+      </div>
+      
+    </div>
+  </div>
+  
+
+  <!-- Include Tailwind CSS and JavaScript -->
+  
+  <script>
+    // JavaScript Logic
+const tooltipBtn = document.getElementById('tooltipBtn');
+const tooltip = document.getElementById('tooltip');
+
+tooltipBtn.addEventListener('mouseenter', () => {
+tooltip.classList.remove('hidden');
+});
+
+    tooltipBtn.addEventListener('mouseleave', () => {
+      tooltip.classList.add('hidden');
+    });
+    const bottomTooltipBtn = document.getElementById('bottomTooltipBtn');
+    const bottomTooltip = document.getElementById('bottomTooltip');
+
+    bottomTooltipBtn.addEventListener('mouseenter', () => {
+      bottomTooltip.classList.remove('hidden');
+    });
+
+    bottomTooltipBtn.addEventListener('mouseleave', () => {
+      bottomTooltip.classList.add('hidden');
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+</body>
+</html>
