@@ -3,102 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>Tooltips with Tailwind CSS and JavaScript</title>
+  <title>Tooltip Example</title>
+
+  <!-- Include Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
-<body class="font-sans">
+<body class="p-8">
 
-<div class="container mx-auto mt-8">
- 
-    <!-- Top Tooltip -->
-    <button id="topTooltipButton" class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-      Top Tooltip
-    </button>
-    <div id="topTooltip" class="absolute top-0 hidden p-2 mt-2 text-white bg-gray-800 rounded transform-translate-x-1/2 tooltip left-1/2">
-      Top tooltip content
+  <button class="relative p-4 m-16 text-white bg-red-500" onmouseover="showTooltip('top-tooltip', 'This is a top tooltip')" onmouseout="hideTooltip('top-tooltip')">
+    Top Tooltip
+    <div id="top-tooltip" class="absolute hidden w-full p-2 m-1 text-white bg-gray-800 rounded bottom-full">
     </div>
+  </button>
 
-    <!-- Right Tooltip -->
-    <button id="rightTooltipButton" class="px-4 py-2 ml-4 font-bold text-white bg-green-500 rounded hover:bg-green-700">
-      Right Tooltip
-    </button>
-    <div id="rightTooltip" class="absolute hidden p-2 mt-2 text-white bg-gray-800 rounded transform-translate-y-1/2 tooltip top-1/2 ">
-      Right tooltip content
+  <button class="relative p-4 m-16 text-white bg-green-500" onmouseover="showTooltip('right-tooltip', 'This is a right tooltip')" onmouseout="hideTooltip('right-tooltip')">
+    Right Tooltip
+    <div id="right-tooltip" class="absolute hidden w-full p-2 m-1 text-white transform -translate-y-1/2 bg-gray-800 rounded top-1/2 left-full">
     </div>
+  </button>
 
-    <!-- Bottom Tooltip -->
-    <button id="bottomTooltipButton" class="px-4 py-2 ml-4 font-bold text-white bg-yellow-500 rounded hover:bg-yellow-700">
-      Bottom Tooltip
-    </button>
-    <div id="bottomTooltip" class="absolute bottom-0 hidden p-2 mt-2 text-white bg-gray-800 rounded transform-translate-x-1/2 tooltip left-1/2">
-      Bottom tooltip content
+  <button 
+    class="relative p-4 m-16 text-white bg-blue-500" onmouseover="showTooltip('bottom-tooltip', 'This is a bottom tooltip')" onmouseout="hideTooltip('bottom-tooltip')">
+    Bottom Tooltip
+    <div id="bottom-tooltip" class="absolute hidden w-full p-2 m-1 text-white bg-gray-800 rounded top-full">
     </div>
+  </button>
 
-    <!-- Left Tooltip -->
-    <button id="leftTooltipButton" class="px-4 py-2 ml-4 font-bold text-white bg-red-500 rounded hover:bg-red-700">
-      Left Tooltip
-    </button>
-    <div id="leftTooltip" class="absolute hidden p-2 mt-2 text-white bg-gray-800 rounded transform-translate-y-1/2 tooltip top-1/2 ">
-      Left tooltip content
+  <button 
+    class="relative p-4 m-16 text-white bg-black" onmouseover="showTooltip('left-tooltip', 'This is a left tooltip')"onmouseout="hideTooltip('left-tooltip')">
+    Left Tooltip
+    <div id="left-tooltip" class="absolute hidden w-full p-2 m-1 text-white transform -translate-y-1/2 bg-gray-800 rounded top-1/2 right-full">
     </div>
-  
-</div>
+  </button>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const topTooltipButton = document.getElementById('topTooltipButton');
-    const topTooltip = document.getElementById('topTooltip');
-
-    const rightTooltipButton = document.getElementById('rightTooltipButton');
-    const rightTooltip = document.getElementById('rightTooltip');
-
-    const bottomTooltipButton = document.getElementById('bottomTooltipButton');
-    const bottomTooltip = document.getElementById('bottomTooltip');
-
-    const leftTooltipButton = document.getElementById('leftTooltipButton');
-    const leftTooltip = document.getElementById('leftTooltip');
-
-    function showTooltip(element) {
-      element.classList.remove('hidden');
+  <script>
+    function showTooltip(id, content) {
+      var tooltip = document.getElementById(id);
+      tooltip.innerText = content;
+      tooltip.classList.remove('hidden');
     }
 
-    function hideTooltip(element) {
-      element.classList.add('hidden');
+    function hideTooltip(id) {
+      var tooltip = document.getElementById(id);
+      tooltip.classList.add('hidden');
     }
-
-    topTooltipButton.addEventListener('mouseover', function () {
-      showTooltip(topTooltip);
-    });
-
-    topTooltipButton.addEventListener('mouseout', function () {
-      hideTooltip(topTooltip);
-    });
-
-    rightTooltipButton.addEventListener('mouseover', function () {
-      showTooltip(rightTooltip);
-    });
-
-    rightTooltipButton.addEventListener('mouseout', function () {
-      hideTooltip(rightTooltip);
-    });
-
-    bottomTooltipButton.addEventListener('mouseover', function () {
-      showTooltip(bottomTooltip);
-    });
-
-    bottomTooltipButton.addEventListener('mouseout', function () {
-      hideTooltip(bottomTooltip);
-    });
-
-    leftTooltipButton.addEventListener('mouseover', function () {
-      showTooltip(leftTooltip);
-    });
-
-    leftTooltipButton.addEventListener('mouseout', function () {
-      hideTooltip(leftTooltip);
-    });
-  });
-</script>
+  </script>
 
 </body>
 </html>
