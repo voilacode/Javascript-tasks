@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Modal</title>
+</head>
+<body class="font-sans">
+
+<div class="container mx-auto mt-8 text-center">
+  <button id="openModalButton" class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+    Open Modal
+  </button>
+</div>
+
+<div id="myModal" class="fixed inset-0 hidden bg-gray-500 bg-opacity-75 modal">
+  <div class="w-1/2 p-8 mx-auto my-20 bg-white modal-content">
+    <span id="closeModal" class="absolute top-0 right-0 text-3xl cursor-pointer close">&times;</span>
+    <p>This is the modal content.Please fill your name.</p><br>
+    <form action="">
+    <label for="fn">Name:</label>
+    <input type="text" id="fn" name="fn" class="border-2 border-blue-600"  placeholder="Enter your name"><br><br>
+    <button class="p-2 text-white bg-blue-600 rounded-lg">Submit</button>
+  </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const openModalButton = document.getElementById('openModalButton');
+    const modal = document.getElementById('myModal');
+    const closeModalButton = document.getElementById('closeModal');
+
+    openModalButton.addEventListener('click', function () {
+      modal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', function () {
+      modal.classList.add('hidden');
+    });
+  });
+</script>
+
+</body>
+</html>

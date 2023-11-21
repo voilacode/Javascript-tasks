@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltip</title>
+
+  <!-- Include Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="p-8">
+
+  <button class="relative p-4 m-16 text-white bg-red-500" onmouseover="showTooltip('top-tooltip', 'This is a top tooltip')" onmouseout="hideTooltip('top-tooltip')">
+    Top Tooltip
+    <div id="top-tooltip" class="absolute hidden w-full p-2 m-1 text-white bg-gray-800 rounded bottom-full">
+    </div>
+  </button>
+
+  <button class="relative p-4 m-16 text-white bg-green-500" onmouseover="showTooltip('right-tooltip', 'This is a right tooltip')" onmouseout="hideTooltip('right-tooltip')">
+    Right Tooltip
+    <div id="right-tooltip" class="absolute hidden w-full p-2 m-1 text-white transform -translate-y-1/2 bg-gray-800 rounded top-1/2 left-full">
+    </div>
+  </button>
+
+  <button 
+    class="relative p-4 m-16 text-white bg-blue-500" onmouseover="showTooltip('bottom-tooltip', 'This is a bottom tooltip')" onmouseout="hideTooltip('bottom-tooltip')">
+    Bottom Tooltip
+    <div id="bottom-tooltip" class="absolute hidden w-full p-2 m-1 text-white bg-gray-800 rounded top-full">
+    </div>
+  </button>
+
+  <button 
+    class="relative p-4 m-16 text-white bg-black" onmouseover="showTooltip('left-tooltip', 'This is a left tooltip')"onmouseout="hideTooltip('left-tooltip')">
+    Left Tooltip
+    <div id="left-tooltip" class="absolute hidden w-full p-2 m-1 text-white transform -translate-y-1/2 bg-gray-800 rounded top-1/2 right-full">
+    </div>
+  </button>
+
+  <script>
+    function showTooltip(id, content) {
+      var tooltip = document.getElementById(id);
+      tooltip.innerText = content;
+      tooltip.classList.remove('hidden');
+    }
+
+    function hideTooltip(id) {
+      var tooltip = document.getElementById(id);
+      tooltip.classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>

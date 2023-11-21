@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion </title>
+  <!-- Include the Tailwind CSS stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Include Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="p-4 bg-gray-200">
+
+  <div class="max-w-md mx-auto">
+
+    <!-- Horizontal Accordion -->
+    <div class="p-4 bg-white rounded shadow ">
+      <div class="flex">
+        <!-- Accordion Tab A -->
+        <div class="flex-none w-1/3">
+          <button onclick="toggleAccordion('accordionA')" class="flex items-center justify-center w-full h-12 bg-blue-500 accordion-tab hover:bg-gray-300 focus:outline-none">
+            <span class="font-semibold ">What is html?</span>
+          </button>
+        </div>
+
+        <!-- Accordion Tab B -->
+        <div class="flex-none w-1/3">
+          <button onclick="toggleAccordion('accordionB')" class="flex items-center justify-center w-full h-12 bg-blue-200 accordion-tab hover:bg-gray-300 focus:outline-none">
+            <span class="font-semibold">What is java ?</span>
+          </button>
+        </div>
+
+        <!-- Accordion Tab C -->
+        <div class="flex-none w-1/3">
+          <button onclick="toggleAccordion('accordionC')" class="flex items-center justify-center w-full h-12 bg-blue-500 accordion-tab hover:bg-gray-300 focus:outline-none">
+            <span class="font-semibold">What is SQL</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Accordion Content A -->
+      <div id="accordionA" class="hidden p-4 accordion-content">
+        <p>HyperText Markup Language (HTML) is the basic scripting language used by web browsers to render pages on the world wide web. HyperText allows a user to click a link and be redirected to a new page referenced by that link.</p>
+      </div>
+
+      <!-- Accordion Content B -->
+      <div id="accordionB" class="hidden p-4 bg-blue-200 accordion-content">
+        <p>Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to big data applications and server-side technologies.</p>
+      </div>
+
+      <!-- Accordion Content C -->
+      <div id="accordionC" class="hidden p-4 accordion-content">
+        <p>SQL (pronounced "ess-que-el") stands for Structured Query Language. SQL is used to communicate with a database. According to ANSI (American National Standards Institute), it is the standard language for relational database management systems.</p>
+      </div>
+
+      
+    </div>
+
+  </div>
+
+  <script>
+    // JavaScript function to toggle accordion visibility
+    function toggleAccordion(accordionId) {
+      const accordions = document.querySelectorAll('.accordion-content');
+      
+      accordions.forEach((accordion) => {
+        if (accordion.id === accordionId) {
+          accordion.classList.toggle('hidden');
+        } else {
+          accordion.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
