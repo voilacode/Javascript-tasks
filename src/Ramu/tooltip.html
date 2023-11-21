@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-200">
+
+<div class="relative inline-block">
+    <button class="text-blue-500 border cursor-pointer hover:underline" id="tooltipTrigger">Hover me</button>
+    <div id="tooltip" class="absolute invisible px-2 py-1 mt-2 text-sm text-white transition-opacity duration-300 bg-gray-800 opacity-0">
+        This is a tooltip
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tooltipTrigger = document.getElementById('tooltipTrigger');
+        const tooltip = document.getElementById('tooltip');
+
+        tooltipTrigger.addEventListener('mouseover', function () {
+            tooltip.classList.add('opacity-100', 'visible');
+            tooltip.classList.remove('opacity-0', 'invisible');
+        });
+
+        tooltipTrigger.addEventListener('mouseout', function () {
+            tooltip.classList.remove('opacity-100', 'visible');
+            tooltip.classList.add('opacity-0', 'invisible');
+        });
+    });
+</script>
+
+</body>
+</html>
