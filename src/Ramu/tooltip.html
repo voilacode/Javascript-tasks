@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tooltip Example</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex items-center justify-center h-screen bg-gray-200">
-
-<div class="relative inline-block">
-    <button class="text-blue-500 border cursor-pointer hover:underline" id="tooltipTrigger">Hover me</button>
-    <div id="tooltip" class="absolute invisible px-2 py-1 mt-2 text-sm text-white transition-opacity duration-300 bg-gray-800 opacity-0">
-        This is a tooltip
+<body>
+    <div class="relative flex items-center justify-around h-screen">
+    <div class="mx-4 ">
+        <button class="px-2 py-1 text-lg font-semibold bg-yellow-200 rounded hover:bg-yellow-300" onmouseover="tooltipopen(this)" onmouseleave="tooltipclose(this)">Hover me!</button>
+        <div class="absolute hidden px-2 py-1 text-xs text-white -translate-y-20 bg-black rounded tooltip ">Hi i am tooltip</div>
+    </div>
+    <div class="mx-4 ">
+        <button class="px-2 py-1 text-lg font-semibold bg-yellow-200 rounded hover:bg-yellow-300" onmouseover="tooltipopen(this)" onmouseleave="tooltipclose(this)">Hover me!</button>
+        <div class="absolute hidden px-2 py-1 text-xs text-white translate-x-32 -translate-y-8 bg-black rounded tooltip">Hi i am tooltip</div>
+    </div>
+    <div class="mx-4 ">
+        <button class="px-2 py-1 text-lg font-semibold bg-yellow-200 rounded hover:bg-yellow-300" onmouseover="tooltipopen(this)" onmouseleave="tooltipclose(this)">Hover me!</button>
+        <div class="absolute hidden px-2 py-1 text-xs text-white translate-y-4 bg-black rounded tooltip">Hi i am tooltip</div>
+    </div>
+    <div class="mx-4 ">
+        <button class="px-2 py-1 text-lg font-semibold bg-yellow-200 rounded hover:bg-yellow-300" onmouseover="tooltipopen(this)" onmouseleave="tooltipclose(this)">Hover me!</button>
+        <div class="absolute hidden px-2 py-1 text-xs text-white -translate-x-32 -translate-y-4 bg-black rounded tooltip top-1/2">Hi i am tooltip</div>
     </div>
 </div>
+</body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const tooltipTrigger = document.getElementById('tooltipTrigger');
-        const tooltip = document.getElementById('tooltip');
+    function tooltipopen(button) {
+            const tooltip = button.nextElementSibling;
+            tooltip.style.display = 'block';
+        }
 
-        tooltipTrigger.addEventListener('mouseover', function () {
-            tooltip.classList.add('opacity-100', 'visible');
-            tooltip.classList.remove('opacity-0', 'invisible');
-        });
-
-        tooltipTrigger.addEventListener('mouseout', function () {
-            tooltip.classList.remove('opacity-100', 'visible');
-            tooltip.classList.add('opacity-0', 'invisible');
-        });
-    });
+        
+        function tooltipclose(button) {
+            const tooltip = button.nextElementSibling;
+            tooltip.style.display = 'none';
+        }
+    
+    
 </script>
-
-</body>
 </html>
