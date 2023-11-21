@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+
+<div class="grid grid-cols-2 gap-4">
+    <div class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Mathematics</button>
+        <div class="tooltip-text bg-gray-800 text-white p-2 rounded opacity-0 transition-opacity duration-300"
+             onmouseover="showTooltip(this.parentNode)" onmouseout="hideTooltip(this.parentNode)">
+            Mathematics is the study of numbers, quantity, space, and patterns. It plays a crucial role in various fields, including science, engineering, and economics.
+        </div>
+    </div>
+
+    <div class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">History</button>
+        <div class="tooltip-text bg-gray-800 text-white p-2 rounded opacity-0 transition-opacity duration-300"
+             onmouseover="showTooltip(this.parentNode)" onmouseout="hideTooltip(this.parentNode)">
+            History is the study of the past. It helps us understand how societies, cultures, and civilizations have evolved over time, shaping the present and future.
+        </div>
+    </div>
+
+    <div class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Science</button>
+        <div class="tooltip-text bg-gray-800 text-white p-2 rounded opacity-0 transition-opacity duration-300"
+             onmouseover="showTooltip(this.parentNode)" onmouseout="hideTooltip(this.parentNode)">
+            Science explores the natural world, seeking to understand the fundamental principles governing the universe. It includes disciplines such as physics, chemistry, and biology.
+        </div>
+    </div>
+
+    <div class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+        <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Literature</button>
+        <div class="tooltip-text bg-gray-800 text-white p-2 rounded opacity-0 transition-opacity duration-300"
+             onmouseover="showTooltip(this.parentNode)" onmouseout="hideTooltip(this.parentNode)">
+            Literature encompasses written works, including novels, poems, and plays. It reflects the human experience, conveying ideas, emotions, and cultural values.
+        </div>
+    </div>
+</div>
+
+<script>
+    function showTooltip(element) {
+        element.querySelector('.tooltip-text').classList.add('opacity-100');
+    }
+
+    function hideTooltip(element) {
+        element.querySelector('.tooltip-text').classList.remove('opacity-100');
+    }
+</script>
+
+</body>
+</html>
