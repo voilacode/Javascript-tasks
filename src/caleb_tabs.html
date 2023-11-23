@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <title>Tabs</title>
+</head>
+
+<body class="bg-gray-200 p-4">
+
+    <div class="max-w-md mx-auto bg-white rounded-md overflow-hidden shadow-lg translate-y-40">
+
+        <!-- Tabs -->
+        <div class="flex">
+            <button class="tab-btn active-tab p-4 flex-1 text-center border-r border-blue-300 transition duration-300" data-tab="tab1">One</button>
+            <button class="tab-btn p-4 flex-1 text-center transition duration-300" data-tab="tab2">Two</button>
+            <button class="tab-btn p-4 flex-1 text-center transition duration-300" data-tab="tab3">Three</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tab1" class="tab-content p-4 transition duration-300">
+            <div>
+                <p class="text-cyan-600 text-justify">Content for Tab 1</p>
+                <div class="flex justify-end mt-4">
+                    <button class="bg-cyan-600 text-white px-4 py-2 rounded shadow-lg">Click Here</button>
+                </div>
+            </div>
+        </div>
+        <div id="tab2" class="tab-content hidden p-4 transition duration-300">
+            <div>
+                <p class="text-rose-600 text-justify">Content for Tab 2</p>
+                <div class="flex justify-end mt-4">
+                    <button class="bg-rose-600 text-white px-4 py-2 rounded shadow-lg">View More</button>
+                </div>
+            </div>
+        </div>
+        <div id="tab3" class="tab-content hidden p-4 transition duration-300">
+            <div>
+                <p class="text-emerald-600 text-justify">Content for Tab 3</p>
+                <div class="flex justify-end mt-4">
+                    <button class="bg-emerald-600 text-white px-4 py-2 rounded shadow-lg">Continue...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle tab switching
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove 'active-tab' class and border from all tabs
+                    tabs.forEach(t => t.classList.remove('active-tab', 'border-r', 'border-blue-300'));
+                    // Hide all tab contents
+                    tabContents.forEach(tc => tc.classList.add('hidden'));
+
+                    // Add 'active-tab' class and border to the clicked tab
+                    tab.classList.add('active-tab', 'border-r', 'border-blue-300');
+                    // Show the corresponding tab content
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

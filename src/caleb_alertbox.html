@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Alert Box</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body class="flex h-screen justify-center items-center">
+
+<!-- Button to trigger the innovative alert box -->
+<button onclick="showInnovativeAlert()" class="bg-blue-500 text-white px-3 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+    Apply
+</button>
+
+<!-- Innovative Alert Box -->
+<div id="innovativeAlert" class="innovative-alert hidden fixed top-0 left-0 w-full h-full  justify-center">
+    <div class="bg-white rounded-lg p-8 shadow-lg max-w-md transform translate-x-full transition-transform duration-300">
+        <ion-icon name="close" id="closeBtn" class="text-xl flex justify-end ms-auto hover:cursor-pointer" onclick="closeInnovativeAlert()"></ion-icon>
+        <div class="flex items-center">
+            <ion-icon name="checkmark-circle" class="text-emerald-600 text-3xl mr-2"></ion-icon>
+            <h1 class="font-semibold text-emerald-600 text-xl">Success</h1>
+        </div>
+        <p class="mt-2 text-gray-800">Application sent succesfully..</p>
+    </div>
+</div>
+
+<script>
+    function showInnovativeAlert() {
+        var alertBox = document.getElementById("innovativeAlert");
+        alertBox.classList.remove("hidden");
+        alertBox.children[0].classList.remove("translate-x-full");
+    }
+
+    function closeInnovativeAlert() {
+        var alertBox = document.getElementById("innovativeAlert");
+        alertBox.children[0].classList.add("translate-x-full");
+        setTimeout(function () {
+            alertBox.classList.add("hidden");
+        }, 300);
+    }
+
+    // Trigger the alert box on page load (optional)
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     showInnovativeAlert();
+    // });
+</script>
+
+</body>
+</html>
