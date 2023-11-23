@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-[88%] mx-auto ">
+        <div class="flex justify-around tab-continer">
+            <div class="relative font-semibold border-b-0 border-green-300 cursor-pointer hover:border-b-4 boder-m-auto hover:duration-300"
+                onmouseover="opendiv(0)"  onmouseleave="closediv(0)">
+                <h1 class="px-3 py-1 text-xl rounded">Tab1</h1>
+                <div class="absolute hidden   font-semibold md:translate-x-32 translate-x-52 bg-white border border-gray-200 rounded shadow-xl cs1 w-[280px] right-0 mt-2 px-2 py-1  ">
+                    <h1 class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, perspiciatis. div1</h1>
+                </div>
+            </div>
+            <div class="relative text-xl font-semibold border-b-0 border-green-300 cursor-pointer hover:border-b-4 boder-m-auto hover:duration-300"
+                onmouseover="opendiv(1)" onmouseleave="closediv(1)">
+                <h1 class="px-3 py-1 rounded ">Tab2</h1>
+                <div class="absolute hidden   font-semibold md:translate-x-32 translate-x-28 bg-white border border-gray-200 rounded shadow-xl cs1 w-[280px] right-0 mt-2 px-2 py-1  " >
+                    <h1 class="text-sm md:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, tempora! div2</h1>
+                </div>
+            </div>
+            <div class="relative text-xl font-semibold border-b-0 border-green-300 cursor-pointer hover:border-b-4 boder-m-auto hover:duration-300"
+                onmouseover="opendiv(2)" onmouseleave="closediv(2)">
+                <h1 class="px-3 py-1 rounded ">Tab3</h1>
+                <div class="absolute hidden   font-semibold md:translate-x-32 translate-x-4 bg-white border border-gray-200 rounded shadow-xl cs1 w-[280px] right-0 mt-2 px-2 py-1  " >
+                    <h1 class="text-sm md:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. div3</h1>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // const s1 = document.getElementById('id1');
+        // const s2 = document.getElementById('id2');
+        // const s3 = document.getElementById('id3');
+
+        // function opendiv(demo) {
+        //     demo.classList.remove('hidden');
+        // }
+        function opendiv(index) {
+    var demo1 = document.querySelectorAll('.cs1');
+    demo1[index].classList.remove('hidden');
+}
+
+function closediv(index) {
+    var demo1 = document.querySelectorAll('.cs1');
+    demo1[index].classList.add('hidden');
+}
+
+
+    </script>
+</body>
+
+</html>

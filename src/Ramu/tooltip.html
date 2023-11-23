@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="relative flex items-center justify-around h-screen">
+    <div class="relative flex flex-col items-center justify-around h-screen md:flex-row">
     <div class="mx-4 ">
         <button class="px-2 py-1 text-lg font-semibold bg-yellow-200 rounded hover:bg-yellow-300" onmouseover="tooltipopen(this)" onmouseleave="tooltipclose(this)">Hover me!</button>
         <div class="absolute hidden px-2 py-1 text-xs text-white -translate-y-20 bg-black rounded tooltip ">Hi i am tooltip</div>
@@ -22,7 +22,7 @@
     </div>
     <div class="mx-4 ">
         <button class="px-2 py-1 text-lg font-semibold bg-yellow-200 rounded hover:bg-yellow-300" onmouseover="tooltipopen(this)" onmouseleave="tooltipclose(this)">Hover me!</button>
-        <div class="absolute hidden px-2 py-1 text-xs text-white -translate-x-32 -translate-y-4 bg-black rounded tooltip top-1/2">Hi i am tooltip</div>
+        <div class="absolute hidden px-2 py-1 text-xs text-white -translate-x-32 -translate-y-4 bg-black rounded tooltip md:top-1/2">Hi i am tooltip</div>
     </div>
 </div>
 </body>
