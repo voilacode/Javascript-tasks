@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Tab links -->
+    <div class="tab overflow-hidden border border-gray-400 bg-gray-100">
+        <p class="tablinks bg-inherit float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="openVersion(event, 'Question')">Question</p>
+        <p class="tablinks bg-inherit float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="openVersion(event, 'Version1')">Version-1</p>
+        <p class="tablinks bg-inherit float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="openVersion(event, 'Version2')">Version-2</p>
+        <p class="tablinks bg-inherit float-left border-0 outline-0 cursor-pointer p-5 hover:bg-gray-300 hover:text-blue-500 font-semibold duration-500" onclick="openVersion(event, 'Version3')">Version-3</p>
+    </div>
+    
+    <!-- Tab content -->
+    <div id="Question" class="tabcontent hidden p-8 border border-gray-300">
+        <h3 class="font-semibold text-xl">Question</h3>
+        <p>  Question needs to come Here</p>
+    </div>
+    
+    <div id="Version1" class="tabcontent hidden p-8 border border-gray-300">
+        <h3 class="font-semibold text-xl">Version1</h3>
+        <p>Version1 Question Here...</p>
+    </div>
+    <div id="Version2" class="tabcontent hidden p-8 border border-gray-300">
+        <h3 class="font-semibold text-xl">Version2</h3>
+        <p>Version2 Question Here...</p>
+    </div>
+    <div id="Version3" class="tabcontent hidden p-8 border border-gray-300">
+        <h3 class="font-semibold text-xl">Version3</h3>
+        <p>Version3 Question Here...</p>
+    </div>
+    <script>
+        function openVersion(evt, version) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(version).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
