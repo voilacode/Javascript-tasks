@@ -3,101 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/output.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <title>Accordion</title>
-    
 </head>
-<body class="flex items-center justify-center h-screen text-white bg-slate-500">
+<body class="flex items-center justify-center h-screen text-white bg-gray-500">
 
-    <div class="flex flex-col w-11/12 md:10/12 lg:w-[50vw] overflow-auto rounded-md bg-slate-800 gap-[1px] shadow-2xl" id="accordion">
-        <!--first-->
-        <div class="item ">
-            <div class="flex justify-between p-6 font-bold cursor-pointer header bg-slate-900">
-                <div>Heading 1</div>
+    <div class="w-96 md:w-1/2" id="accordion">
+        <!-- First Section -->
+        <div class="mb-2 item">
+            <div class="flex justify-between p-4 bg-gray-900 rounded-t cursor-pointer" onclick="toggleAccordion('section1')">
+                <div>Section 1</div>
                 <div>
-                    <!--down-->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 activeIcon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7"></path>
                     </svg>
-
-                    <!--up-->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inactiveIcon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                      
-                </div>                  
+                </div>
             </div>
-            <div class="text-justify transition-all duration-500 ease-in-out content text-slate-200">
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus nisi earum ex. Similique, dolor quae. Totam molestiae laudantium possimus amet quo ex sint, cupiditate ea repellat nam vel error omnis illum incidunt aliquid sit aliquam fuga veritatis quam deleniti?
-                <br><br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus nisi earum ex. Similique, dolor quae. Totam molestiae laudantium possimus amet quo ex sint, cupiditate ea repellat nam vel error omnis illum incidunt aliquid sit aliquam fuga veritatis quam deleniti?
+            <div id="section1" class="hidden p-4 py-6 text-justify bg-gray-800 rounded-b content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, expedita earum excepturi veritatis, odit neque sed porro doloremque, quam blanditiis amet est ea quaerat vitae exercitationem quasi. Assumenda, animi voluptas!
             </div>
         </div>
-        
-        <!--second-->
-        <div class="item">
-            <div class="flex justify-between p-6 font-bold cursor-pointer header bg-slate-900">
-                <div>Heading 2</div>
-                <div>
-                    <!--down-->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 activeIcon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-                    </svg>
 
-                    <!--up-->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inactiveIcon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        <!-- Second Section -->
+        <div class="mb-2 item">
+            <div class="flex justify-between p-4 bg-gray-900 rounded-t cursor-pointer" onclick="toggleAccordion('section2')">
+                <div>Section 2</div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </div>                  
+                </div>
             </div>
-            <div class="text-justify transition-all duration-500 ease-in-out content text-slate-200">
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus nisi earum ex. Similique, dolor quae. Totam molestiae laudantium possimus amet quo ex sint, cupiditate ea repellat nam vel error omnis illum incidunt aliquid sit aliquam fuga veritatis quam deleniti?
-                <br><br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus nisi earum ex. Similique, dolor quae. Totam molestiae laudantium possimus amet quo ex sint, cupiditate ea repellat nam vel error omnis illum incidunt aliquid sit aliquam fuga veritatis quam deleniti?
+            <div id="section2" class="hidden p-4 py-6 text-justify bg-gray-800 rounded-b content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, expedita earum excepturi veritatis, odit neque sed porro doloremque, quam blanditiis amet est ea quaerat vitae exercitationem quasi. Assumenda, animi voluptas!
             </div>
         </div>
-        
-        <!--third-->
-        <div class="item">
-            <div class="flex justify-between p-6 font-bold cursor-pointer header bg-slate-900">
-                <div>Heading 3</div>
-                <div>
-                    <!--down-->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 activeIcon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-                    </svg>
 
-                    <!--up-->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inactiveIcon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        <!-- Third Section -->
+        <div class="mb-2 item">
+            <div class="flex justify-between p-4 bg-gray-900 rounded-t cursor-pointer" onclick="toggleAccordion('section3')">
+                <div>Section 3</div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7"></path>
                     </svg>
-                    
-                </div>                  
+                </div>
             </div>
-            <div class="text-justify transition-all duration-500 ease-in-out content text-slate-200">
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus nisi earum ex. Similique, dolor quae. Totam molestiae laudantium possimus amet quo ex sint, cupiditate ea repellat nam vel error omnis illum incidunt aliquid sit aliquam fuga veritatis quam deleniti?
-                
+            <div id="section3" class="hidden p-4 py-6 text-justify bg-gray-800 rounded-b content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, expedita earum excepturi veritatis, odit neque sed porro doloremque, quam blanditiis amet est ea quaerat vitae exercitationem quasi. Assumenda, animi voluptas!
             </div>
         </div>
     </div>
 
     <script>
-        let items = document.querySelectorAll('#accordion .item .header');
+        function toggleAccordion(sectionId) {
+            const section = document.getElementById(sectionId);
 
-        items.forEach((item)=>{
-            item.addEventListener('click', (e)=>{
-                items.forEach((header) => {
-                    header.closest(".item").classList.remove("active");
-                });
-                
-                e.currentTarget.closest(".item").classList.toggle("active");
+            if (section.classList.contains('hidden')) {
+                // If the section is currently hidden, show it and hide others
+                closeAllSections();
+                section.classList.remove('hidden');
+            } else {
+                // If the section is currently shown, hide it
+                section.classList.add('hidden');
+            }
+        }
+
+        function closeAllSections() {
+            const sections = document.querySelectorAll('.content');
+
+            sections.forEach((section) => {
+                section.classList.add('hidden');
             });
-        });
+        }
     </script>
-    
 </body>
 </html>
