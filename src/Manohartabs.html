@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Component with Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="../dist/output.css" rel="stylesheet">
+
+</head>
+
+<body class=" p-16">
+
+  <div class=" bg-yellow-300 rounded-lg shadow-md">
+    <div class="flex justify-between bg-green-200 rounded-t-lg">
+      <button class="py-3 px-4 w-1/4 text-center text-lg text-black font-semibold focus:outline-none tab-button" data-tab="tab1">Tab 1</button>
+      <button class="py-3 px-4 w-1/4 text-center text-lg text-black font-semibold focus:outline-none tab-button" data-tab="tab2">Tab 2</button>
+      <button class="py-3 px-4 w-1/4 text-center text-lg text-black font-semibold focus:outline-none tab-button" data-tab="tab3">Tab 3</button>
+    </div>
+    <div class="p-4">
+      <div class="tab-content" id="tab1">
+        <p class="text-gray-700 font-sm ease-in scale-x-95">This is the content for Tab 1</p>
+      </div>
+      <div class="hidden tab-content" id="tab2">
+        <p class="text-gray-700 font-sm">This is the content for Tab 2</p>
+      </div>
+      <div class="hidden tab-content" id="tab3">
+        <p class="text-gray-700 font-sans">This is the content for Tab 3</p>
+      </div>
+      <div class="hidden tab-content" id="tab4">
+        <p class="text-gray-700 font-sm">This is the content for Tab 4</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabButtons = document.querySelectorAll('[data-tab]');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const tab = button.getAttribute('data-tab');
+
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.add('hidden');
+          });
+
+          document.getElementById(tab).classList.remove('hidden');
+
+          tabButtons.forEach(btn => {
+            btn.classList.remove('bg-blue-300', 'text-black');
+          });
+          button.classList.add('bg-blue-300', 'text-black');
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
