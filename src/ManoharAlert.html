@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="flex items-center justify-center h-screen ">
+    <div class="flex items-center justify-center  py-40 ">
         <button class="absolute px-3 py-2 font-semibold text-white bg-blue-600 rounded"
-            onclick="toggleDisplay()">click</button>
-        <div class="relative flex hidden p-8 mx-3 -translate-y-40 bg-white border border-green-400 rounded shadow md:mx-0" id="alert_box">
-            <h1 class="text-black">Your details are stored for internal validation</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" onclick="toggleDisplay()" viewBox="0 0 24 24"
+            onclick="Manohar()">click</button>
+        <div class="relative  hidden p-8 mx-3 -translate-y-40 bg-white border  rounded shadow md:mx-0 flex" id="alert_box">
+            <h1 class="text-black">Hi this is manohar</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" onclick="Manohar()" viewBox="0 0 24 24"
                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 translate-x-6 -translate-y-6 cursor-pointer">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -25,7 +26,7 @@
     <script>
         const alertbox = document.getElementById('alert_box');
 
-        function toggleDisplay() {
+        function Manohar() {
             alertbox.classList.toggle('hidden');
         }
 
