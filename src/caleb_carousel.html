@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Image Carousel</title>
+    <style>
+        #carousel-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        #carousel-heading {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #2d3748;
+        }
+
+        #image-list {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Set a fixed height for visibility */
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex; /* Display images in a row */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            flex: 1; /* Take up equal space */
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dot-container {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5rem;
+            background-color: #4a5568;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #2d3748;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="carousel-container">
+        <h2 id="carousel-heading" class="text-4xl font-bold mb-6 text-center text-gray-800">Image Carousel</h2>
+        <div id="image-list" class="relative w-full overflow-hidden rounded-lg shadow-lg">
+            <img class="carousel-image" src="./assets/web-development.jpg" alt="Image 1">
+            <img class="carousel-image" src="./assets/Cyber-Img.jpg" alt="Image 2">
+            <img class="carousel-image" src="./assets/Data_Science.jpg" alt="Image 3">
+        </div>
+        <div id="dot-container" class="dot-container"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageList = document.getElementById('image-list');
+            const dotContainer = document.getElementById('dot-container');
+
+            const images = document.querySelectorAll('.carousel-image');
+            const intervalDuration = 2000;
+
+            let currentIndex = 0;
+
+            function showImage(index) {
+                const imageWidth = images[0].clientWidth;
+                imageList.style.transform = `translateX(${-index * imageWidth}px)`;
+                updateActiveDot(index);
+            }
+
+            function showNext() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }
+
+            function createDot(index) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => {
+                    clearInterval(slideshowInterval);
+                    showImage(index);
+                });
+                return dot;
+            }
+
+            function updateActiveDot(index) {
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+
+            images.forEach((_, index) => {
+                const dot = createDot(index);
+                dotContainer.appendChild(dot);
+            });
+
+            const slideshowInterval = setInterval(showNext, intervalDuration);
+        });
+    </script>
+</body>
+
+</html>
