@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section>
+
+        <div class="relative">
+            <ul id="slider">
+                <li class="h-[50vh] relative">
+                    <img class="h-full object-cover w-full" src="../assets/slide1.jpeg">
+                    <div class="absolute top-0 left-0 w-full h-full flex ">
+                        <h1 class="text-center text-gray-300  my-auto w-full px-20 italic text-4xl">Enjoy the Nature</h1>
+                    </div>
+                </li>
+                <li class="h-[50vh] relative hidden">
+                    <img class="h-full object-cover w-full" src="../assets/slide2.jpeg">
+                    <div class="absolute top-0 left-0 w-full h-full flex ">
+                        <h1 class="text-center text-white my-auto w-full px-20">Slide 2</h1>
+                    </div>
+                </li>
+                <li class="h-[50vh] relative hidden">
+                    <img class="h-full object-cover w-full" src="../assets/slide3.jpeg">
+                    <div class="absolute top-0 left-0 w-full h-full flex ">
+                        <h1 class="text-center  my-auto w-full px-20">Slide 3</h1>
+                    </div>
+                </li>
+                <li class="h-[50vh] relative hidden">
+                    <img class="h-full object-cover w-full" src="../assets/slide4.jpeg">
+                    <div class="absolute top-0 left-0 w-full h-full flex ">
+                        <h1 class="text-center text-white my-auto w-full px-20">Slide 4</h1>
+                    </div>
+                </li>
+                
+            </ul>
+            <div class="absolute flex h-full top-0 left-0 w-full ">
+                <div class="my-auto px-5 w-full flex justify-between">
+                    <button onclick="pre()" class="bg-white rounded-full bg-opacity-80 shadow-2xl p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button onclick="next()" class="bg-white rounded-full bg-opacity-80 shadow-2xl p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let currentSlideID = 1;
+        const sliderElement = document.getElementById('slider');
+        const totalSlides = sliderElement.childElementCount;
+
+        function next() {
+            if (currentSlideID < totalSlides) {
+                currentSlideID++;
+                showSlide();
+            }
+        }
+
+        function pre() {
+            if (currentSlideID > 1) {
+                currentSlideID--;
+                showSlide();
+            }
+        }
+
+        
+
+        function showSlide() {
+            const slides = document.getElementById('slider').getElementsByTagName('li');
+            for (let index = 0; index < totalSlides; index++) {
+                const element = slides[index];
+                if (currentSlideID === index + 1) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
