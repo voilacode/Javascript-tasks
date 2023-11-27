@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Document</title>
+</head>
+<body class="m-0">
+    <div class="slider relative w-full  max-w-screen-xl p-4 mx-auto sm:px-16" style="height: 500px;">
+        <div class="list absolute top-0 left-0 h-full flex w-screen max-w-screen-xl p-4 mx-auto sm:px-16 duration-1000">
+            <div class="item">
+                <img src="https://wallpapers.com/images/featured/beautiful-3vau5vtfa3qn7k8v.jpg" alt="Image 1" style="width:1300px; max-width:100vw;" class=" h-full object-cover"  >
+            </div>
+            <div class="item">
+                <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700956800&semt=ais" style="width:1300px; max-width:100vw;" class=" h-full object-cover" alt="Image 2">
+            </div>
+            <div class="item">
+                <img src="https://cdn.wallpapersafari.com/72/58/WLHYwR.jpg" style="width:1300px; max-width:100vw;" class=" h-full object-cover" alt="Image 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- button prev and next -->
+    <div class="buttons absolute lg:top-2/4 top-60   flex justify-between w-full max-w-screen-xl p-4 mx-auto sm:px-16">
+        <button id="prev" class="absolute left-10 w-14 h-14 rounded-full bg-gray-400 opacity-50 text-white border-0 font-bold font-mono"><</button>
+        <button id="next" class="absolute right-10 w-14 h-14 rounded-full bg-gray-400 opacity-50 text-white border-0 font-bold font-mono">></button>
+    </div>
+    <!-- dots -->
+    <ul class="dots absolute bottom-3 text-white left-0 w-full m-0  max-w-screen-xl p-4 mx-auto sm:px-16 flex justify-center">
+        <li class="active list-none w-2 h-2 rounded-full bg-white m-5"></li>
+        <li class="list-none w-2 h-2 rounded-full bg-white m-5"></li>
+        <li class="list-none w-2 h-2 rounded-full bg-white m-5"></li>
+    </ul>
+    <script>
+        let list = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let dots = document.querySelectorAll('.slider .dots li');
+        let prev = document.getElementById('prev');
+        let next = document.getElementById('next');
+
+        let active =0;
+        let lengthItems = items.length -1;
+
+        next.onclick= function(){
+            if(active +1>lengthItems){
+                active=0;
+            }
+            else{
+                active +=1;
+            }
+            reloadSlider();
+        }
+        prev.onclick = function(){
+            if(active -1 <0){
+                active = lengthItems;
+            }
+            else{
+                active -=1;
+            }
+            reloadSlider();
+        }
+        function reloadSlider(){
+            let checkLeft = items[active].offsetLeft;
+            list.style.left = -checkLeft + 'px';
+
+            let lastActiveDot = document.querySelector('.slider .dots li.active');
+            lastActiveDot.classList.remove('active');
+            dots[active].classList.add('active');
+            clearInterval(refreshSlider);
+        }
+    </script>
+</body>
+</html>
