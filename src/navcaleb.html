@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>VoilaCode</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 border-b-2">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center">
+                    <img src="./assets/icon.jpg" class="h-8 mr-3 rounded-full" alt="Voilacode_icon">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">VoilaCode</span>
+                </a>
+                <div class="flex md:order-2">
+                    <button type="button" class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Contact</button>
+
+
+                    <button data-dropdown-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-white  md:bg-transparent md:p-0 " aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-white  md:bg-transparent md:p-0 " aria-current="page">About</a>
+                        </li>
+                        <li class="group relative">
+                            <button id="dropdownServices" data-dropdown-toggle="servicesDropdown" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded   md:border-0 md:p-0 md:w-auto">
+                                Services
+                                <!-- <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg> -->
+                            </button>
+                            <!-- Dropdown menu -->
+                            <!-- <div id="servicesDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-full md:w-44  dark:divide-gray-600 absolute mt-2 right-0">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500  ">Web_Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 ">Mob_Development</a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        </li>
+                        <li class="group relative">
+                            <button id="dropdownProducts" data-dropdown-toggle="productsDropdown" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded  md:border-0  md:p-0 md:w-auto">
+                                Products
+                                <!-- <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg> -->
+                            </button>
+                            <!-- Dropdown menu -->
+                            <!-- <div id="productsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-full md:w-44  dark:divide-gray-600 absolute mt-2 right-0">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500  ">Community_App</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 ">Recruitment_App</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500  ">Website_App</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500  ">Learning_App</a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <script src="calebnav.js"></script>
+
+</body>
+
+</html>
