@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <section >
+    
+        <div class="relative">
+            
+                <ul id="slider" class="transition duration-1000 ease-in-out">
+                    <li class="h-[50vh] relative ">
+                        <img src="https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg" alt="" class="object-cover w-full h-full">
+                        <div class="absolute flex w-full h-full t-0 l-0">
+                            <h1 class="my-auto text-3xl font-bold text-center text-white ">Heading One</h1>
+                        </div>
+                    </li>
+                    <li class="h-[50vh] relative hidden ">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" class="object-cover w-full h-full">
+                        <div class="absolute flex w-full h-full t-0 l-0">
+                            <h1 class="my-auto text-3xl font-bold text-center text-white ">Heading One</h1>
+                        </div>
+                    </li>
+                    <li class="h-[50vh] relative hidden ">
+                        <img src="https://media.istockphoto.com/id/1093110112/photo/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-of-green-forest-with-pure.jpg?s=612x612&w=0&k=20&c=lpQ1sQI49bYbTp9WQ_EfVltAqSP1DXg0Ia7APTjjxz4=" alt="" class="object-cover w-full h-full">
+                        <div class="absolute flex w-full h-full t-0 l-0">
+                            <h1 class="my-auto text-3xl font-bold text-center text-white ">Heading One</h1>
+                        </div>
+                    </li>
+                </ul>
+
+            <div class="absolute top-0 left-0 flex w-full h-full px-5">
+                <div class="flex justify-between w-full my-auto">
+              <button onclick="prev()" class="p-2 bg-white rounded-full shadow-lg opacity-75">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                  </svg>
+                  
+              </button>
+                <button onclick="next()" class="p-2 bg-white rounded-full shadow-lg opacity-75">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                  </svg>
+                  
+              </button>  
+            </div>
+            </div>
+        </div>
+    <script>
+        currentSlideId=1;
+        sliderElement=document.getElementById('slider');
+        totalSlides=sliderElement.childElementCount;
+        
+        function next(){
+            if(currentSlideId<totalSlides){
+                currentSlideId++;
+                showSlide()
+            }
+            
+        }
+        function prev(){
+            if(currentSlideId>1){
+                currentSlideId--;
+                showSlide()
+            }
+            
+        }
+
+        function showSlide(){
+            slides=document.getElementById('slider').getElementsByTagName('li');
+            for(let index=0;index<totalSlides;index++){
+                const element=slides[index];
+                if(currentSlideId===index+1){
+                    element.classList.remove('hidden');
+                }else{
+                    element.classList.add('hidden');
+                }
+            }
+        }
+    </script>
+   </section>
+    
+</body>
+</html>

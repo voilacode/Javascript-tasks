@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <title>Carousel with Tailwind CSS</title>
+</head>
+<body class="p-8 bg-gray-200">
+
+  <div class="relative w-8/12 m-auto border border-black rounded h-96 carousel">
+    <!-- Images will be dynamically added here with JavaScript -->
+  </div>
+  <div class="mt-4 text-center">
+    <button class="px-2 py-1 bg-blue-200 rounded" onclick="prevImage()">previous</button>
+    <button class="px-2 py-1 bg-green-200 rounded" onclick="nextImage()">next</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const imageSources = [
+        "https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_1280.jpg",
+        "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg",
+        "https://cdn.pixabay.com/photo/2012/03/01/00/55/flowers-19830_640.jpg",
+        "https://cdn.pixabay.com/photo/2014/04/14/20/11/pink-324175_640.jpg"
+      ];
+
+      let currentIndex = 0;
+      const carousel = document.querySelector('.carousel');
+
+      function showImage() {
+        carousel.innerHTML = `<img src="${imageSources[currentIndex]}" alt="" class="absolute object-cover w-full h-full">`;
+      }
+
+      showImage();
+
+      window.prevImage = function() {
+        currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+        showImage();
+      };
+
+      window.nextImage = function() {
+        currentIndex = (currentIndex + 1) % imageSources.length;
+        showImage();
+      };
+    });
+  </script>
+</body>
+</html>

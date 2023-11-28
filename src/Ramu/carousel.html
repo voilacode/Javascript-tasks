@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section>
+        <div>
+            <ul class="flex items-center h-screen">
+                <li class="h-[50vh] w-[50vw] mx-auto bg-orange-300 rounded">
+                    <div class="flex items-center justify-between w-full h-full px-6">
+                        <svg id="prevBtnOrange" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-2 bg-white rounded-full cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                        </svg>
+                        <h1 class="text-2xl font-semibold">Slide 1 content</h1>
+                        <svg id="nextBtnOrange" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-2 bg-white rounded-full cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </div>
+                </li>
+
+                <li class="h-[50vh] w-[50vw] mx-auto bg-blue-300 rounded hidden">
+                    <div class="flex items-center justify-between w-full h-full px-6">
+                        <svg id="prevBtnBlue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-2 bg-white rounded-full cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                        </svg>
+                        <h1 class="text-2xl font-semibold">Slide 2 content</h1>
+                        <svg id="nextBtnBlue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-2 bg-white rounded-full cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </div>
+                </li>
+                
+                <li class="h-[50vh] w-[50vw] mx-auto bg-green-300 rounded hidden">
+                    <div class="flex items-center justify-between w-full h-full px-6">
+                        <svg id="prevBtnGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-2 bg-white rounded-full cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                        </svg>
+                        <h1 class="text-2xl font-semibold">Slide 3 content</h1>
+                        <svg id="nextBtnGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-2 bg-white rounded-full cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentSlide = 1;
+    
+            function showSlide() {
+                // Hide all slides
+                document.querySelectorAll('.flex > li').forEach(slide => {
+                    slide.classList.add('hidden');
+                });
+    
+                // Show the selected slide
+                const selectedSlide = document.querySelector(`.flex > li:nth-child(${currentSlide})`);
+                selectedSlide.classList.remove('hidden');
+            }
+    
+            // Function to handle next button click
+            function nextSlide() {
+                currentSlide++;
+                if (currentSlide > document.querySelectorAll('.flex > li').length) {
+                    currentSlide = 1;
+                }
+                showSlide();
+            }
+    
+            // Function to handle previous button click
+            function prevSlide() {
+                currentSlide--;
+                if (currentSlide < 1) {
+                    currentSlide = document.querySelectorAll('.flex > li').length;
+                }
+                showSlide();
+            }
+    
+            // Attach click events to arrow buttons
+            const prevBtnOrange = document.getElementById('prevBtnOrange');
+            const nextBtnOrange = document.getElementById('nextBtnOrange');
+    
+            const prevBtnBlue = document.getElementById('prevBtnBlue');
+            const nextBtnBlue = document.getElementById('nextBtnBlue');
+    
+            const prevBtnGreen = document.getElementById('prevBtnGreen');
+            const nextBtnGreen = document.getElementById('nextBtnGreen');
+    
+            prevBtnOrange.addEventListener('click', prevSlide);
+            nextBtnOrange.addEventListener('click', nextSlide);
+    
+            prevBtnBlue.addEventListener('click', prevSlide);
+            nextBtnBlue.addEventListener('click', nextSlide);
+    
+            prevBtnGreen.addEventListener('click', prevSlide);
+            nextBtnGreen.addEventListener('click', nextSlide);
+        });
+    </script>
+    
+</body>
+</html>
