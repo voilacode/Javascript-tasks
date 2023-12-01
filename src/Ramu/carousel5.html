@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+
+        .slide{
+            transition: 200ms opacity ease-in-out;
+            transition-delay: 200ms;
+        }
+        
+       .slide[data-active]{
+        opacity: 1;
+        z-index: 1;
+        transform: translateX(0); 
+        transition-delay: 0ms;
+       } 
+       button{
+        transform: translate(-50%);
+       }
+       ul{
+        padding:0;
+        margin: 0;
+        list-style: none;
+       }
+       .slide:not([data-active]) {
+    transform: translateX(100%);
+       }
+    </style>
+</head>
+<body class="m-0">
+    <section aria-label="Newest Photos">
+        <div class="relative w-screen h-screen carousel" data-carousel>
+            <button data-carousel-button="prev" class="absolute z-50 p-2 text-xl font-bold bg-blue-400 rounded cursor-pointer prev top-72 left-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+              </svg>
+              </button>
+            <button data-carousel-button="next" class="absolute z-50 p-2 text-xl font-bold bg-blue-400 rounded cursor-pointer next top-72 right-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+              </button>
+<ul data-slides class="w-screen h-screen">
+    <li class="absolute top-0 bottom-0 left-0 right-0 transition duration-300 ease-out opacity-0 slide" data-active>
+        <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_640.jpg" alt="img1" class="block object-center w-full h-full">
+    </li>
+    <li class="absolute top-0 bottom-0 left-0 right-0 opacity-0 slide">
+        <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?size=626&ext=jpg" alt="img1" class="block object-center w-full h-full">
+    </li>
+    <li class="absolute top-0 bottom-0 left-0 right-0 opacity-0 slide">
+        <img src="https://img.freepik.com/free-photo/bird-colorful-colorful-flowers-generative-ai_206725-752.jpg?size=626&ext=jpg" alt="img1" class="block object-center w-full h-full">
+    </li>
+</ul>
+</div>
+    </section>
+
+
+    <script>
+        const buttons = document.querySelectorAll("[data-carousel-button]");
+    
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+                const slides = button
+                    .closest("[data-carousel]")
+                    .querySelector("[data-slides]");
+    
+                const activeSlide = slides.querySelector("[data-active]");
+                let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+                if (newIndex < 0) newIndex = slides.children.length - 1;
+                if (newIndex >= slides.children.length) newIndex = 0;
+                slides.children[newIndex].dataset.active = true;
+                delete activeSlide.dataset.active;
+            });
+        });
+    </script>
+    
+</body>
+</html>
