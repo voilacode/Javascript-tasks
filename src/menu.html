@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>Responsive Navbar with Mega Menu</title>
+</head>
+<body class="bg-gray-100">
+
+<div class="p-4 text-white bg-gray-800">
+    <nav class="flex items-center justify-between">
+        <div>
+            <a href="#" class="text-2xl font-bold">Logo</a>
+        </div>
+        <div class="hidden space-x-4 md:flex">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <div class="relative group">
+                <a href="#" class="hover:text-gray-300">Products</a>
+                <div class="absolute left-0 hidden p-4 mt-2 space-y-2 text-gray-800 bg-white rounded-md shadow-md">
+                    <div class="flex items-start">
+                        <div class="w-1/2">
+                            <h3 class="mb-2 font-bold">Category 1</h3>
+                            <a href="#" class="block hover:text-gray-600">Item 1</a>
+                            <a href="#" class="block hover:text-gray-600">Item 2</a>
+                        </div>
+                        <div class="w-1/2">
+                            <h3 class="mb-2 font-bold">Category 2</h3>
+                            <a href="#" class="block hover:text-gray-600">Item 3</a>
+                            <a href="#" class="block hover:text-gray-600">Item 4</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="hover:text-gray-300">About</a>
+            <a href="#" class="hover:text-gray-300">Contact</a>
+        </div>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</div>
+
+<div id="mobile-menu" class="hidden p-4 text-gray-800 bg-white rounded-md shadow-md md:hidden">
+    <a href="#" class="block mb-2 hover:text-gray-600">Home</a>
+    <div class="mb-2">
+        <button class="w-full text-left focus:outline-none" id="products-toggle">
+            Products
+            <svg class="inline-block float-right w-5 h-5" fill="none" stroke="currentColor"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div id="products-dropdown" class="hidden pl-4">
+            <a href="#" class="block hover:text-gray-600">Category 1</a>
+            <a href="#" class="block hover:text-gray-600">Category 2</a>
+        </div>
+    </div>
+    <a href="#" class="block mb-2 hover:text-gray-600">About</a>
+    <a href="#" class="block hover:text-gray-600">Contact</a>
+</div>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    document.getElementById('products-toggle').addEventListener('click', function () {
+        document.getElementById('products-dropdown').classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>
